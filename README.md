@@ -1,4 +1,4 @@
-<p align="center">[![TripRun](https://i.ibb.co/dGxRKhM/white.png)](https://triprun.io)</p>
+<p align="center">![TripRun](https://i.ibb.co/dGxRKhM/white.png)</p>
 
 ------------
 
