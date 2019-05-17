@@ -6,6 +6,7 @@ import { PropTypes } from "prop-types";
 
 // reactstrap components
 import {
+  Badge,
   Button,
   Card,
   CardHeader,
@@ -207,6 +208,42 @@ class Sidebar extends React.Component {
             </Form>
             {/* Navigation */}
             <Nav navbar>{this.createLinks(routes)}</Nav>
+            <br />
+            <br />
+            <br />
+            <hr className="my-3" />
+            <h6 className="navbar-heading text-muted">Quick Chat</h6>
+            <Col>
+              <Nav className="navbar-transparent bg-transparent">
+                <NavItem key={1}>
+                  <Row className="align-items-center">
+                  <Badge color="" className="badge-dot mr-1">
+                    <i className="bg-green" />
+                    Inna Shmalz
+                  </Badge>
+                    <h6 className="text-info">invitation</h6>
+                  </Row>
+                </NavItem>
+                <NavItem key={2}>
+                  <Row className="align-items-center">
+                    <Badge color="" className="badge-dot mr-1">
+                      <i className="bg-gray" />
+                      Dan Rodriguez
+                    </Badge>
+                    <h6 className="text-info">message</h6>
+                  </Row>
+                </NavItem>
+                <NavItem key={3}>
+                  <Row className="align-items-center">
+                    <Badge color="" className="badge-dot mr-1">
+                      <i className="bg-gray" />
+                      Carolina Velez
+                    </Badge>
+                    <h6 className="text-info">message</h6>
+                  </Row>
+                </NavItem>
+              </Nav>
+            </Col>
           </Collapse>
         </Container>
       </Navbar>

@@ -17,7 +17,7 @@ class Admin extends React.Component {
   }
   getRoutes = routes => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/in") {
         return (
           <Route
             path={prop.layout + prop.path}

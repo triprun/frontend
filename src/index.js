@@ -12,9 +12,9 @@ import AuthLayout from "./layouts/Auth.jsx";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
+      <Route path="/in" render={props => <AdminLayout {...props} />} />
       <Route path="/auth" render={props => <AuthLayout {...props} />} />
-      <Redirect from="/" to="/admin/index" />
+      <Redirect from="/" to="/in/index" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
