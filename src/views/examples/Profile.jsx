@@ -23,10 +23,10 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-import FlagIcon from "../../components/FlagIcon/FlagIcon";
+import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
-import UserHeader from "../../components/Headers/UserHeader.jsx";
+import UserHeader from "components/Headers/UserHeader.jsx";
 
 class Profile extends React.Component {
   render() {
@@ -37,7 +37,7 @@ class Profile extends React.Component {
         <Container className="mt--7" fluid>
           <Row>
             <Col className="mb-5 mb-xl-0" xl="8">
-              <Card className="bg-gradient-default shadow">
+              <Card className="bg-gradient-info shadow">
                 <CardHeader className="bg-transparent">
                   <Row className="align-items-center">
                     <div className="col">
@@ -50,7 +50,7 @@ class Profile extends React.Component {
                 </CardHeader>
                 <CardBody>
                   <Table
-                    className="align-items-center table-dark bg-gradient-default table-flush text-white"
+                    className="align-items-center table-flush text-white"
                     responsive
                   >
                     <tbody>
@@ -64,7 +64,7 @@ class Profile extends React.Component {
                             >
                               <img
                                 alt="..."
-                                src={require("../../assets/img/theme/delhi.jpg")}
+                                src={require("assets/img/theme/delhi.jpg")}
                               />
                             </a>
                             <Media>
@@ -91,7 +91,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/team-1-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -109,7 +109,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                                src={require("assets/img/theme/team-2-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -127,7 +127,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                                src={require("assets/img/theme/team-3-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -145,7 +145,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                                src={require("assets/img/theme/team-4-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -196,7 +196,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/team-1-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -214,7 +214,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                                src={require("assets/img/theme/team-2-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -232,7 +232,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                                src={require("assets/img/theme/team-3-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -250,7 +250,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                                src={require("assets/img/theme/team-4-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -277,7 +277,7 @@ class Profile extends React.Component {
                             >
                               <img
                                 alt="..."
-                                src={require("../../assets/img/theme/mallorca.jpg")}
+                                src={require("assets/img/theme/mallorca.jpg")}
                               />
                             </a>
                             <Media>
@@ -304,7 +304,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/team-1-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -322,7 +322,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                                src={require("assets/img/theme/team-2-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -340,7 +340,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                                src={require("assets/img/theme/team-3-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -358,7 +358,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                                src={require("assets/img/theme/team-4-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -409,7 +409,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                                src={require("assets/img/theme/team-1-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -427,7 +427,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                                src={require("assets/img/theme/team-2-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -445,7 +445,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                                src={require("assets/img/theme/team-3-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -463,7 +463,7 @@ class Profile extends React.Component {
                               <img
                                 alt="..."
                                 className="rounded-circle"
-                                src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                                src={require("assets/img/theme/team-4-800x800.jpg")}
                               />
                             </a>
                             <UncontrolledTooltip
@@ -494,13 +494,13 @@ class Profile extends React.Component {
                         <img
                           alt="..."
                           className="rounded-circle"
-                          src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                          src={require("assets/img/theme/team-4-800x800.jpg")}
                         />
                       </a>
                     </div>
                   </Col>
                 </Row>
-                <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4 rounded">
                   <div className="d-flex justify-content-between">
                     <Button
                       className="mr-4"
@@ -570,7 +570,8 @@ class Profile extends React.Component {
                 <CardHeader className="bg-white border-0">
                   <Row className="align-items-center">
                     <Col xs="8">
-                      <h3 className="mb-0">Photos</h3>
+                      <h3 className="mb-0 d-none d-sm-block">Photos</h3>
+                      <h3 className="mb-0 d-block d-sm-none">Latest Photo</h3>
                     </Col>
                     <Col className="text-right" xs="4">
                       <Button
@@ -585,47 +586,35 @@ class Profile extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  <img
-                    className="rounded shadow float-left"
-                    style={{ width: '308px', height: '308px', objectFit: 'cover' }}
-                    src={require("../../assets/img/theme/beach.jpg")}
-                  />
-                  <div className="float-right">
-                    <Row>
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/light.jpg")}
-                      />
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/italy.jpg")}
-                      />
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/mallorca.jpg")}
-                      />
-                    </Row>
-                    <Row style={{ marginTop: '8px' }}>
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/cave.jpg")}
-                      />
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/karlsruhe.jpg")}
-                      />
-                      <img
-                        className="rounded shadow"
-                        style={{ width: '150px', height: '150px', marginRight: '8px', objectFit: 'cover' }}
-                        src={require("../../assets/img/theme/germany.jpg")}
-                      />
-                    </Row>
-                  </div>
+                  <Col className="float-left col-lg-6 col-xs-12">
+                    <img
+                      className="rounded shadow"
+                      style={{ height: '308px', width: '100%', objectFit: 'cover'}}
+                      src={require("assets/img/theme/beach.jpg")}
+                    />
+                  </Col>
+                  <Row className="float-right col-lg-6 d-none d-sm-block">
+                    <img
+                      className="rounded shadow ml-2"
+                      style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
+                      src={require("assets/img/theme/light.jpg")}
+                    />
+                    <img
+                      className="rounded shadow ml-2"
+                      style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
+                      src={require("assets/img/theme/italy.jpg")}
+                    />
+                    <img
+                      className="rounded shadow mt-2 ml-2"
+                      style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
+                      src={require("assets/img/theme/mallorca.jpg")}
+                    />
+                    <img
+                      className="rounded shadow mt-2 ml-2"
+                      style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
+                      src={require("assets/img/theme/cave.jpg")}
+                    />
+                  </Row>
                 </CardBody>
               </Card>
             </Col>
@@ -929,41 +918,59 @@ class Profile extends React.Component {
                     <div className="img-card">
                       <img
                         className="rounded shadow float-left"
-                        style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                        src={require("../../assets/img/theme/cave.jpg")}
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/cave.jpg")}
                       />
-                      <p className="img-desc">This is hovered text</p>
+                      <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/yellowstone.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/beach.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/baikal.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/italy.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/turkey.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../../assets/img/theme/karlsruhe.jpg")}
-                    />
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/yellowstone.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/beach.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/baikal.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/italy.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/turkey.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/karlsruhe.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
                   </Row>
                 </CardBody>
               </Card>

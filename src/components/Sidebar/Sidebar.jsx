@@ -72,6 +72,7 @@ class Sidebar extends React.Component {
             tag={NavLinkRRD}
             onClick={this.closeCollapse}
             activeClassName="active"
+            disabled={prop.name === 'My Plans' || prop.name === 'Recommended' ? true : false}
           >
             <i className={prop.icon} />
             {prop.name}
@@ -127,7 +128,7 @@ class Sidebar extends React.Component {
                   <span className="avatar avatar-sm rounded-circle">
                     <img
                       alt="..."
-                      src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                      src={require("assets/img/theme/team-1-800x800.jpg")}
                     />
                   </span>
                 </Media>
@@ -208,42 +209,44 @@ class Sidebar extends React.Component {
             </Form>
             {/* Navigation */}
             <Nav navbar>{this.createLinks(routes)}</Nav>
-            <br />
-            <br />
-            <br />
-            <hr className="my-3" />
-            <h6 className="navbar-heading text-muted">Quick Chat</h6>
-            <Col>
-              <Nav className="navbar-transparent bg-transparent">
-                <NavItem key={1}>
-                  <Row className="align-items-center">
-                  <Badge color="" className="badge-dot mr-1">
-                    <i className="bg-green" />
-                    Inna Shmalz
-                  </Badge>
-                    <h6 className="text-info">invitation</h6>
-                  </Row>
-                </NavItem>
-                <NavItem key={2}>
-                  <Row className="align-items-center">
+            <div className="d-none d-sm-block">
+              <br />
+              <br />
+              <br />
+              <hr className="my-3" />
+              <h6 className="navbar-heading text-muted">Quick Chat</h6>
+              <Col>
+                <Nav className="navbar-transparent bg-transparent">
+                  <NavItem key={1}>
+                    <Row className="align-items-center">
                     <Badge color="" className="badge-dot mr-1">
-                      <i className="bg-gray" />
-                      Dan Rodriguez
+                      <i className="bg-green" />
+                      Inna Shmalz
                     </Badge>
-                    <h6 className="text-info">message</h6>
-                  </Row>
-                </NavItem>
-                <NavItem key={3}>
-                  <Row className="align-items-center">
-                    <Badge color="" className="badge-dot mr-1">
-                      <i className="bg-gray" />
-                      Carolina Velez
-                    </Badge>
-                    <h6 className="text-info">message</h6>
-                  </Row>
-                </NavItem>
-              </Nav>
-            </Col>
+                      <h6 className="text-info">invitation</h6>
+                    </Row>
+                  </NavItem>
+                  <NavItem key={2}>
+                    <Row className="align-items-center">
+                      <Badge color="" className="badge-dot mr-1">
+                        <i className="bg-gray" />
+                        Dan Rodriguez
+                      </Badge>
+                      <h6 className="text-info">message</h6>
+                    </Row>
+                  </NavItem>
+                  <NavItem key={3}>
+                    <Row className="align-items-center">
+                      <Badge color="" className="badge-dot mr-1">
+                        <i className="bg-gray" />
+                        Carolina Velez
+                      </Badge>
+                      <h6 className="text-info">message</h6>
+                    </Row>
+                  </NavItem>
+                </Nav>
+              </Col>
+            </div>
           </Collapse>
         </Container>
       </Navbar>

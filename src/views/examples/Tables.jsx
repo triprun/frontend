@@ -21,7 +21,8 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 // core components
-import Header from "../../components/Headers/Header.jsx";
+import Header from "components/Headers/Header.jsx";
+import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 class Tables extends React.Component {
   render() {
@@ -57,19 +58,16 @@ class Tables extends React.Component {
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
-                            <img
-                              alt="..."
-                              src={require("../../assets/img/theme/bootstrap.jpg")}
-                            />
+                            <FlagIcon className="rounded-circle" code="ru" size="3x" squared={true} />
                           </a>
                           <Media>
                             <span className="mb-0 text-sm">
-                              Argon Design System
+                              Amazing Trip To Moscow
                             </span>
                           </Media>
                         </Media>
                       </th>
-                      <td>$2,500 USD</td>
+                      <td>$1,800 USD</td>
                       <td>
                         <Badge color="" className="badge-dot mr-4">
                           <i className="bg-warning" />
@@ -87,7 +85,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                              src={require("assets/img/theme/team-1-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -105,7 +103,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                              src={require("assets/img/theme/team-2-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -123,7 +121,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                              src={require("assets/img/theme/team-3-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -141,7 +139,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                              src={require("assets/img/theme/team-4-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -209,17 +207,17 @@ class Tables extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../../assets/img/theme/angular.jpg")}
+                              src={require("assets/img/theme/delhi.jpg")}
                             />
                           </a>
                           <Media>
                             <span className="mb-0 text-sm">
-                              Angular Now UI Kit PRO
+                              #BestTripToDelhi
                             </span>
                           </Media>
                         </Media>
                       </th>
-                      <td>$1,800 USD</td>
+                      <td>$2,900 USD</td>
                       <td>
                         <Badge color="" className="badge-dot">
                           <i className="bg-success" />
@@ -237,7 +235,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                              src={require("assets/img/theme/team-1-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -255,7 +253,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                              src={require("assets/img/theme/team-2-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -273,7 +271,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                              src={require("assets/img/theme/team-3-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -291,7 +289,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                              src={require("assets/img/theme/team-4-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -359,12 +357,12 @@ class Tables extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../../assets/img/theme/sketch.jpg")}
+                              src={require("assets/img/theme/mallorca.jpg")}
                             />
                           </a>
                           <Media>
                             <span className="mb-0 text-sm">
-                              Black Dashboard
+                              Exploring Mallorca
                             </span>
                           </Media>
                         </Media>
@@ -372,8 +370,8 @@ class Tables extends React.Component {
                       <td>$3,150 USD</td>
                       <td>
                         <Badge color="" className="badge-dot mr-4">
-                          <i className="bg-danger" />
-                          cancelled
+                          <i className="bg-info" />
+                          planning
                         </Badge>
                       </td>
                       <td>
@@ -387,7 +385,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                              src={require("assets/img/theme/team-1-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -405,7 +403,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                              src={require("assets/img/theme/team-2-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -423,7 +421,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                              src={require("assets/img/theme/team-3-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -441,7 +439,7 @@ class Tables extends React.Component {
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                              src={require("assets/img/theme/team-4-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
@@ -459,156 +457,6 @@ class Tables extends React.Component {
                             <Progress
                               max="100"
                               value="72"
-                              barClassName="bg-danger"
-                            />
-                          </div>
-                        </div>
-                      </td>
-                      <td className="text-right">
-                        <UncontrolledDropdown>
-                          <DropdownToggle
-                            className="btn-icon-only text-light"
-                            href="#pablo"
-                            role="button"
-                            size="sm"
-                            color=""
-                            onClick={e => e.preventDefault()}
-                          >
-                            <i className="fas fa-ellipsis-v" />
-                          </DropdownToggle>
-                          <DropdownMenu className="dropdown-menu-arrow" right>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
-                            >
-                              Action
-                            </DropdownItem>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
-                            >
-                              Another action
-                            </DropdownItem>
-                            <DropdownItem
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
-                            >
-                              Something else here
-                            </DropdownItem>
-                          </DropdownMenu>
-                        </UncontrolledDropdown>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <Media className="align-items-center">
-                          <a
-                            className="avatar rounded-circle mr-3"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <img
-                              alt="..."
-                              src={require("../../assets/img/theme/react.jpg")}
-                            />
-                          </a>
-                          <Media>
-                            <span className="mb-0 text-sm">
-                              React Material Dashboard
-                            </span>
-                          </Media>
-                        </Media>
-                      </th>
-                      <td>$4,400 USD</td>
-                      <td>
-                        <Badge color="" className="badge-dot">
-                          <i className="bg-info" />
-                          on schedule
-                        </Badge>
-                      </td>
-                      <td>
-                        <div className="avatar-group">
-                          <a
-                            className="avatar avatar-sm"
-                            href="#pablo"
-                            id="tooltip875258217"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <img
-                              alt="..."
-                              className="rounded-circle"
-                              src={require("../../assets/img/theme/team-1-800x800.jpg")}
-                            />
-                          </a>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip875258217"
-                          >
-                            Ryan Tompson
-                          </UncontrolledTooltip>
-                          <a
-                            className="avatar avatar-sm"
-                            href="#pablo"
-                            id="tooltip834416663"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <img
-                              alt="..."
-                              className="rounded-circle"
-                              src={require("../../assets/img/theme/team-2-800x800.jpg")}
-                            />
-                          </a>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip834416663"
-                          >
-                            Romina Hadid
-                          </UncontrolledTooltip>
-                          <a
-                            className="avatar avatar-sm"
-                            href="#pablo"
-                            id="tooltip372449339"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <img
-                              alt="..."
-                              className="rounded-circle"
-                              src={require("../../assets/img/theme/team-3-800x800.jpg")}
-                            />
-                          </a>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip372449339"
-                          >
-                            Alexander Smith
-                          </UncontrolledTooltip>
-                          <a
-                            className="avatar avatar-sm"
-                            href="#pablo"
-                            id="tooltip108714769"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <img
-                              alt="..."
-                              className="rounded-circle"
-                              src={require("../../assets/img/theme/team-4-800x800.jpg")}
-                            />
-                          </a>
-                          <UncontrolledTooltip
-                            delay={0}
-                            target="tooltip108714769"
-                          >
-                            Jessica Doe
-                          </UncontrolledTooltip>
-                        </div>
-                      </td>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <span className="mr-2">90%</span>
-                          <div>
-                            <Progress
-                              max="100"
-                              value="90"
                               barClassName="bg-info"
                             />
                           </div>
@@ -657,23 +505,20 @@ class Tables extends React.Component {
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
-                            <img
-                              alt="..."
-                              src={require("../../assets/img/theme/vue.jpg")}
-                            />
+                            <FlagIcon className="rounded-circle" code="es" size="3x" squared={true} />
                           </a>
                           <Media>
                             <span className="mb-0 text-sm">
-                              Vue Paper UI Kit PRO
+                              Jump into jungles of Madrid
                             </span>
                           </Media>
                         </Media>
                       </th>
-                      <td>$2,200 USD</td>
+                      <td>$4,400 USD</td>
                       <td>
-                        <Badge color="" className="badge-dot mr-4">
-                          <i className="bg-success" />
-                          completed
+                        <Badge color="" className="badge-dot">
+                          <i className="bg-info" />
+                          on schedule
                         </Badge>
                       </td>
                       <td>
@@ -681,72 +526,72 @@ class Tables extends React.Component {
                           <a
                             className="avatar avatar-sm"
                             href="#pablo"
-                            id="tooltip664029969"
+                            id="tooltip875258217"
                             onClick={e => e.preventDefault()}
                           >
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-1-800x800.jpg")}
+                              src={require("assets/img/theme/team-1-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
                             delay={0}
-                            target="tooltip664029969"
+                            target="tooltip875258217"
                           >
                             Ryan Tompson
                           </UncontrolledTooltip>
                           <a
                             className="avatar avatar-sm"
                             href="#pablo"
-                            id="tooltip806693074"
+                            id="tooltip834416663"
                             onClick={e => e.preventDefault()}
                           >
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-2-800x800.jpg")}
+                              src={require("assets/img/theme/team-2-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
                             delay={0}
-                            target="tooltip806693074"
+                            target="tooltip834416663"
                           >
                             Romina Hadid
                           </UncontrolledTooltip>
                           <a
                             className="avatar avatar-sm"
                             href="#pablo"
-                            id="tooltip844096937"
+                            id="tooltip372449339"
                             onClick={e => e.preventDefault()}
                           >
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-3-800x800.jpg")}
+                              src={require("assets/img/theme/team-3-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
                             delay={0}
-                            target="tooltip844096937"
+                            target="tooltip372449339"
                           >
                             Alexander Smith
                           </UncontrolledTooltip>
                           <a
                             className="avatar avatar-sm"
                             href="#pablo"
-                            id="tooltip757459971"
+                            id="tooltip108714769"
                             onClick={e => e.preventDefault()}
                           >
                             <img
                               alt="..."
                               className="rounded-circle"
-                              src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                              src={require("assets/img/theme/team-4-800x800.jpg")}
                             />
                           </a>
                           <UncontrolledTooltip
                             delay={0}
-                            target="tooltip757459971"
+                            target="tooltip108714769"
                           >
                             Jessica Doe
                           </UncontrolledTooltip>
@@ -754,12 +599,12 @@ class Tables extends React.Component {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <span className="mr-2">100%</span>
+                          <span className="mr-2">90%</span>
                           <div>
                             <Progress
                               max="100"
-                              value="100"
-                              barClassName="bg-success"
+                              value="90"
+                              barClassName="bg-info"
                             />
                           </div>
                         </div>

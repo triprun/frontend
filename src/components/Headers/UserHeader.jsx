@@ -12,7 +12,7 @@ class UserHeader extends React.Component {
           style={{
             minHeight: "370px",
             backgroundImage:
-              "url(" + require("../../assets/img/theme/map.jpg") + ")",
+              "url(" + require("assets/img/theme/map.jpg") + ")",
             backgroundSize: "cover",
             backgroundPosition: "center top"
           }}

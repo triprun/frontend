@@ -13,13 +13,7 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
-import {
-  chartOptions,
-  parseOptions,
-} from "../variables/charts.jsx";
-
-import Header from "../components/Headers/Header.jsx";
+import Header from "components/Headers/Header.jsx";
 
 class Index extends React.Component {
   state = {
@@ -41,11 +35,6 @@ class Index extends React.Component {
     setTimeout(() => wow(), 1000);
     // this.chartReference.update();
   };
-  componentWillMount() {
-    if (window.Chart) {
-      parseOptions(Chart, chartOptions());
-    }
-  }
   render() {
     return (
       <>
@@ -73,41 +62,62 @@ class Index extends React.Component {
                 </CardHeader>
                 <CardBody>
                   <Row style={{ flexWrap: "nowrap", overflow: "auto" }}>
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/cave.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/yellowstone.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/beach.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/baikal.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/italy.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/turkey.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/karlsruhe.jpg")}
-                    />
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/cave.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/yellowstone.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/beach.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/baikal.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/italy.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/turkey.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        src={require("assets/img/theme/karlsruhe.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
                   </Row>
                 </CardBody>
               </Card>
@@ -377,47 +387,80 @@ class Index extends React.Component {
             <Col className="mb-5 mb-xl-0" xl="12">
               <Card className="bg-secondary shadow">
                 <CardHeader className="bg-white border-0">
-                  <Col xs="8">
-                    <h3 className="mb-0">New Places</h3>
-                  </Col>
+                  <Row className="align-items-center">
+                    <Col xs="8">
+                      <h3 className="mb-0">New Places</h3>
+                    </Col>
+                    <Col className="text-right" xs="4">
+                      <Button
+                        color="primary"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                        size="sm"
+                      >
+                        Show All
+                      </Button>
+                    </Col>
+                  </Row>
                 </CardHeader>
                 <CardBody>
                   <Row style={{ flexWrap: "nowrap", overflow: "auto" }}>
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/cave.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/yellowstone.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/beach.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/baikal.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/italy.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/turkey.jpg")}
-                    />
-                    <img
-                      className="rounded shadow float-left"
-                      style={{ minWidth: '220px', height: '328px', marginRight: '8px', objectFit: "cover" }}
-                      src={require("../assets/img/theme/karlsruhe.jpg")}
-                    />
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/crave.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/holland.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/kricket.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/kafka.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/tower.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/bridge.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
+                    <div className="img-card">
+                      <img
+                        className="rounded shadow float-left"
+                        style={{ minWidth: '300px', maxWidth: '300px', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
+                        src={require("assets/img/theme/karlsruhe.jpg")}
+                      />
+                      <p className="img-desc rounded">This is hovered text</p>
+                    </div>
                   </Row>
                 </CardBody>
               </Card>

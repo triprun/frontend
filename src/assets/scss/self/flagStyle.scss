@@ -1,3 +1,27 @@
-.flagStyle {
-  border-radius: 30px;
+.img-card {
+  position: relative;
+  height: 328px;
+  width: 300px;
+  margin-right: 8px;
+}
+
+.img-desc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding-top: 290px;
+  padding-left: 5%;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+
+.img-card:hover .img-desc {
+  visibility: visible;
+  opacity: 1;
 }
