@@ -37,7 +37,7 @@ class Profile extends React.Component {
         <Container className="mt--7" fluid>
           <Row>
             <Col className="mb-5 mb-xl-0" xl="8">
-              <Card className="bg-gradient-info shadow">
+              <Card className="bg-gradient-default shadow">
                 <CardHeader className="bg-transparent">
                   <Row className="align-items-center">
                     <div className="col">
@@ -58,14 +58,11 @@ class Profile extends React.Component {
                         <th scope="row">
                           <Media className="align-items-center">
                             <a
-                              className="avatar rounded-circle mr-3"
+                              className="mr-3"
                               href="#pablo"
                               onClick={e => e.preventDefault()}
                             >
-                              <img
-                                alt="..."
-                                src={require("assets/img/theme/delhi.jpg")}
-                              />
+                              <FlagIcon className="rounded" code="in" size="3x" squared={false} />
                             </a>
                             <Media>
                               <span className="mb-0 text-sm">
@@ -166,11 +163,11 @@ class Profile extends React.Component {
                         <th scope="row">
                           <Media className="align-items-center">
                             <a
-                              className="avatar rounded-circle mr-3"
+                              className="mr-3"
                               href="#pablo"
                               onClick={e => e.preventDefault()}
                             >
-                              <FlagIcon className="rounded-circle" code="ru" size="3x" squared={true} />
+                              <FlagIcon className="rounded" code="ru" size="3x" squared={false} />
                             </a>
                             <Media>
                               <span className="mb-0 text-sm">
@@ -224,7 +221,7 @@ class Profile extends React.Component {
                               Romina Hadid
                             </UncontrolledTooltip>
                             <a
-                              className="avatar avatar-sm"
+                              className="avatar avatar-md"
                               href="#pablo"
                               id="tooltip467171202"
                               onClick={e => e.preventDefault()}
@@ -271,14 +268,11 @@ class Profile extends React.Component {
                         <th scope="row">
                           <Media className="align-items-center">
                             <a
-                              className="avatar rounded-circle mr-3"
+                              className="mr-3"
                               href="#pablo"
                               onClick={e => e.preventDefault()}
                             >
-                              <img
-                                alt="..."
-                                src={require("assets/img/theme/mallorca.jpg")}
-                              />
+                              <FlagIcon className="rounded" code="es" size="3x" squared={false} />
                             </a>
                             <Media>
                               <span className="mb-0 text-sm">
@@ -379,11 +373,11 @@ class Profile extends React.Component {
                         <th scope="row">
                           <Media className="align-items-center">
                             <a
-                              className="avatar rounded-circle mr-3"
+                              className="mr-3"
                               href="#pablo"
                               onClick={e => e.preventDefault()}
                             >
-                              <FlagIcon className="rounded-circle" code="es" size="3x" squared={true} />
+                              <FlagIcon className="rounded" code="es" size="3x" squared={false} />
                             </a>
                             <Media>
                               <span className="mb-0 text-sm">
@@ -485,7 +479,7 @@ class Profile extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
+            <Col className="order-xl-2 mb-5 mb-xl-0 order-first" xl="4">
               <Card className="card-profile shadow">
                 <Row className="justify-content-center">
                   <Col className="order-lg-2" lg="3">
@@ -563,15 +557,14 @@ class Profile extends React.Component {
               </Card>
             </Col>
           </Row>
-          <br/>
-          <Row>
-            <Col xl="8">
+          <Row className="mt-3">
+            <Col xl="8" className="mb-3 mb-md-3 mb-lg-0">
               <Card className="bg-secondary shadow">
                 <CardHeader className="bg-white border-0">
                   <Row className="align-items-center">
                     <Col xs="8">
-                      <h3 className="mb-0 d-none d-sm-block">Photos</h3>
-                      <h3 className="mb-0 d-block d-sm-none">Latest Photo</h3>
+                      <h3 className="mb-0 d-none d-md-block">Photos</h3>
+                      <h3 className="mb-0 d-block d-md-none">Latest Photo</h3>
                     </Col>
                     <Col className="text-right" xs="4">
                       <Button
@@ -593,7 +586,7 @@ class Profile extends React.Component {
                       src={require("assets/img/theme/beach.jpg")}
                     />
                   </Col>
-                  <Row className="float-right col-lg-6 d-none d-sm-block">
+                  <Row className="float-right col-lg-6 d-none d-md-block mt-3 mt-lg-0">
                     <img
                       className="rounded shadow ml-2"
                       style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
@@ -893,8 +886,7 @@ class Profile extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col xl="12">
-              <br />
+            <Col xl="12" className="mt-3">
               <Card className="bg-secondary shadow">
                 <CardHeader className="bg-white border-0">
                   <Row className="align-items-center">
@@ -914,59 +906,59 @@ class Profile extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  <Row style={{ flexWrap: "nowrap", overflow: "auto" }}>
-                    <div className="img-card">
+                  <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px', objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px', objectFit: "cover" }}
                         src={require("assets/img/theme/cave.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/yellowstone.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/beach.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/baikal.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/italy.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/turkey.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>
                     </div>
-                    <div className="img-card">
+                    <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
-                        className="rounded shadow float-left"
-                        style={{ minWidth: '220px', maxWidth: '220px', height: '328px',  objectFit: "cover" }}
+                        className="rounded shadow float-left w-100"
+                        style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/karlsruhe.jpg")}
                       />
                       <p className="img-desc rounded">This is hovered text</p>

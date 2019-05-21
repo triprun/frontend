@@ -65,14 +65,14 @@ class Sidebar extends React.Component {
   // creates the links that appear in the left menu / Sidebar
   createLinks = routes => {
     return routes.map((prop, key) => {
-      return (
+      if(! prop.inner) return (
         <NavItem key={key}>
           <NavLink
             to={prop.layout + prop.path}
             tag={NavLinkRRD}
             onClick={this.closeCollapse}
             activeClassName="active"
-            disabled={prop.name === 'My Plans' || prop.name === 'Recommended' ? true : false}
+            disabled={prop.name === 'Recommended' ? true : false}
           >
             <i className={prop.icon} />
             {prop.name}
@@ -113,11 +113,7 @@ class Sidebar extends React.Component {
           {/* Brand */}
           {logo ? (
             <NavbarBrand className="pt-0" {...navbarBrandProps}>
-              <img
-                alt={logo.imgAlt}
-                className="navbar-brand-img"
-                src={logo.imgSrc}
-              />
+              <h1>Trip<i className="ni ni-support-16" />un</h1>
             </NavbarBrand>
           ) : null}
           {/* User */}

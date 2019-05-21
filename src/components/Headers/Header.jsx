@@ -30,7 +30,7 @@ class Header extends React.Component {
                           </span>
                         </div>
                         <Col className="col-auto">
-                          <FlagIcon className="rounded-circle shadow" code="pl" size="3x" squared={true} />
+                          <FlagIcon className="rounded shadow" code="pl" size="3x" squared={false} />
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
@@ -58,7 +58,7 @@ class Header extends React.Component {
                           </span>
                         </div>
                         <Col className="col-auto">
-                          <FlagIcon className="rounded-circle shadow" code="it" size="3x" squared={true} />
+                          <FlagIcon className="rounded shadow" code="it" size="3x" squared={false} />
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
@@ -86,7 +86,7 @@ class Header extends React.Component {
                           </span>
                         </div>
                         <Col className="col-auto">
-                          <FlagIcon className="rounded-circle shadow" code="no" size="3x" squared={true} />
+                          <FlagIcon className="rounded shadow" code="no" size="3x" squared={false} />
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">
@@ -110,11 +110,11 @@ class Header extends React.Component {
                             Bahamas
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            From 109,990 RUB.
+                            From 99,990 RUB.
                           </span>
                         </div>
                         <Col className="col-auto">
-                          <FlagIcon className="rounded-circle shadow" code="bs" size="3x" squared={true} />
+                          <FlagIcon className="rounded shadow" code="bs" size="3x" squared={false} />
                         </Col>
                       </Row>
                       <p className="mt-3 mb-0 text-muted text-sm">

@@ -6,10 +6,11 @@ import { Container } from "reactstrap";
 import AdminNavbar from "components/Navbars/AdminNavbar.jsx";
 import AdminFooter from "components/Footers/AdminFooter.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
+import TripInner from "views/Trip.jsx";
 
 import routes from "routes.js";
 
-class Admin extends React.Component {
+class Trip extends React.Component {
   componentDidUpdate(e) {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -30,17 +31,8 @@ class Admin extends React.Component {
       }
     });
   };
-  getBrandText = path => {
-    for (let i = 0; i < routes.length; i++) {
-      if (
-        this.props.location.pathname.indexOf(
-          routes[i].layout + routes[i].path
-        ) !== -1
-      ) {
-        return routes[i].name;
-      }
-    }
-    return "Brand";
+  getBrandText = () => {
+    return "Trip Overview";
   };
   render() {
     return (
@@ -57,9 +49,10 @@ class Admin extends React.Component {
         <div className="main-content" ref="mainContent">
           <AdminNavbar
             {...this.props}
-            brandText={this.getBrandText(this.props.location.pathname)}
+            brandText={this.getBrandText()}
           />
           <Switch>{this.getRoutes(routes)}</Switch>
+          <TripInner {...this.props} />
           <Container fluid>
             <AdminFooter />
           </Container>
@@ -69,4 +62,4 @@ class Admin extends React.Component {
   }
 }
 
-export default Admin;
+export default Trip;

@@ -1,10 +1,12 @@
 import Index from "./views/Index.jsx";
-import Profile from "./views/examples/Profile.jsx";
-import Maps from "./views/examples/Maps.jsx";
+import Profile from "./views/Profile.jsx";
+import Plans from "./views/Plans.jsx";
+import Maps from "./views/Maps.jsx";
 // import Register from "./views/examples/Register.jsx";
 // import Login from "./views/examples/Login.jsx";
-import Tables from "./views/examples/Tables.jsx";
-import Icons from "./views/examples/Icons.jsx";
+import Tables from "./views/Tables.jsx";
+import Trip from "./views/Trip.jsx";
+import Icons from "./views/Icons.jsx";
 
 var routes = [
   {
@@ -12,42 +14,56 @@ var routes = [
     name: "Profile",
     icon: "ni ni-single-02 text-grey",
     component: Profile,
-    layout: "/in"
+    layout: "/in",
+    inner: false
   },
   {
-    path: "/my_trips",
+    path: "/plans",
     name: "My Plans",
     icon: "ni ni-compass-04 text-orange",
-    component: Profile,
-    layout: "/in"
+    component: Plans,
+    layout: "/in",
+    inner: false
   },
   {
     path: "/trips",
     name: "My Trips",
     icon: "ni ni-world text-green",
     component: Tables,
-    layout: "/in"
+    layout: "/in",
+    inner: false
   },
   {
     path: "/index",
     name: "Today's Hotspots",
     icon: "fa fa-fire text-red",
     component: Index,
-    layout: "/in"
+    layout: "/in",
+    inner: false
   },
   {
     path: "/icons",
     name: "Recommended",
     icon: "fa fa-star text-yellow",
     component: Icons,
-    layout: "/in"
+    layout: "/in",
+    inner: false
   },
   {
     path: "/maps",
     name: "Maps",
     icon: "ni ni-pin-3 text-orange",
     component: Maps,
-    layout: "/in"
+    layout: "/in",
+    inner: false
+  },
+  {
+    path: "/trip/:trip_id",
+    name: "Trip Overview",
+    icon: "ni ni-pin-3 text-orange",
+    component: Trip,
+    layout: "/in",
+    inner: true
   },
 ];
 export default routes;

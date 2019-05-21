@@ -7,11 +7,13 @@ import "./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css";
 import "./assets/scss/argon-dashboard-react.scss";
 
 import AdminLayout from "./layouts/Admin.jsx";
+import TripLayout from "./layouts/Trip.jsx";
 import AuthLayout from "./layouts/Auth.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+      <Route path="/in/trip/:trip_id" render={props => <TripLayout {...props} />} />
       <Route path="/in" render={props => <AdminLayout {...props} />} />
       <Route path="/auth" render={props => <AuthLayout {...props} />} />
       <Redirect from="/" to="/in/index" />

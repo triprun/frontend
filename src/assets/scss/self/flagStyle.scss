@@ -1,7 +1,5 @@
 .img-card {
   position: relative;
-  height: 328px;
-  width: 300px;
   margin-right: 8px;
 }
 
@@ -24,4 +22,144 @@
 .img-card:hover .img-desc {
   visibility: visible;
   opacity: 1;
+}
+
+.card-trip-pic {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 60px;
+  height: 200px;
+  background-blend-mode: overlay;
+
+  .card-trip-data {
+    width: 90%;
+    border-radius: $border-radius;
+    @extend .shadow;
+    padding: 15px;
+    padding-bottom: 0;
+    transform: translate(-50%, 130%);
+    position: absolute;
+    left: 50%;
+    transition: $transition-base;
+
+    &:hover {
+      transform: translate(-50%, 127%);
+    }
+  }
+
+  .card-trip-data-2 {
+    width: 90%;
+    border-radius: $border-radius;
+    @extend .shadow;
+    padding: 15px;
+    padding-bottom: 0;
+    transform: translate(-50%, 97%);
+    position: absolute;
+    left: 50%;
+    transition: $transition-base;
+
+    &:hover {
+      transform: translate(-50%, 92%);
+    }
+  }
+
+  .card-trip-data-3 {
+    width: 90%;
+    border-radius: $border-radius;
+    @extend .shadow;
+    padding: 15px;
+    padding-bottom: 0;
+    transform: translate(-50%, 77%);
+    position: absolute;
+    left: 50%;
+    transition: $transition-base;
+
+    &:hover {
+      transform: translate(-50%, 72%);
+    }
+  }
+}
+
+.card-profile-image-mid {
+    position: relative;
+
+    img {
+        max-width: 60px;
+        border-radius: $border-radius;
+        transform: translate(-50%, -40%);
+        position: absolute;
+        left: 50%;
+        transition: $transition-base;
+
+        &:hover {
+            transform: translate(-50%, -43%);
+        }
+    }
+}
+
+.card-profile-image-mid-2 {
+    position: relative;
+
+    img {
+        max-width: 60px;
+        border-radius: $border-radius;
+        transform: translate(-50%, -80%);
+        position: absolute;
+        left: 50%;
+        transition: $transition-base;
+
+        &:hover {
+            transform: translate(-50%, -83%);
+        }
+    }
+}
+
+.card-profile-image-small {
+    position: relative;
+
+    img {
+        max-width: 50px;
+        border-radius: $border-radius;
+        transform: translate(-50%, -40%);
+        position: absolute;
+        left: 50%;
+        transition: $transition-base;
+
+        &:hover {
+            transform: translate(-50%, -43%);
+        }
+    }
+}
+
+.card-profile-image-small-2 {
+    position: relative;
+
+    img {
+        max-width: 50px;
+        border-radius: $border-radius;
+        transform: translate(-50%, -80%);
+        position: absolute;
+        left: 50%;
+        transition: $transition-base;
+
+        &:hover {
+            transform: translate(-50%, -83%);
+        }
+    }
+}
+
+.card-date {
+  cursor: pointer;
+
+  &:hover {
+      transform: translate(0%, -5%);
+  }
+
+  .active {
+    transform: translate(0%, -5%);
+
+    &:hover {
+      transform: translate(0%, 0%);
+    }
+  }
 }
