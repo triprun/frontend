@@ -2,14 +2,10 @@ import React from "react";
 
 // reactstrap components
 import {
-  FormGroup,
-  Form,
-  Input,
   Button,
   Card,
   CardHeader,
   CardBody,
-  Progress,
   Table,
   Container,
   Row,
@@ -26,7 +22,7 @@ import {
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
-import UserHeader from "components/Headers/UserHeader.jsx";
+import { UserHeader } from "components/Headers/UserHeader.jsx";
 
 class Profile extends React.Component {
   render() {
@@ -581,6 +577,7 @@ class Profile extends React.Component {
                 <CardBody>
                   <Col className="float-left col-lg-6 col-xs-12">
                     <img
+                      alt="..."
                       className="rounded shadow"
                       style={{ height: '308px', width: '100%', objectFit: 'cover'}}
                       src={require("assets/img/theme/beach.jpg")}
@@ -588,21 +585,25 @@ class Profile extends React.Component {
                   </Col>
                   <Row className="float-right col-lg-6 d-none d-md-block mt-3 mt-lg-0">
                     <img
+                      alt="..."
                       className="rounded shadow ml-2"
                       style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
                       src={require("assets/img/theme/light.jpg")}
                     />
                     <img
+                      alt="..."
                       className="rounded shadow ml-2"
                       style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
                       src={require("assets/img/theme/italy.jpg")}
                     />
                     <img
+                      alt="..."
                       className="rounded shadow mt-2 ml-2"
                       style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
                       src={require("assets/img/theme/mallorca.jpg")}
                     />
                     <img
+                      alt="..."
                       className="rounded shadow mt-2 ml-2"
                       style={{ width: '150px', height: '150px',  objectFit: 'cover' }}
                       src={require("assets/img/theme/cave.jpg")}
@@ -909,6 +910,7 @@ class Profile extends React.Component {
                   <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px', objectFit: "cover" }}
                         src={require("assets/img/theme/cave.jpg")}
@@ -917,6 +919,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/yellowstone.jpg")}
@@ -925,6 +928,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/beach.jpg")}
@@ -933,6 +937,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/baikal.jpg")}
@@ -941,6 +946,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/italy.jpg")}
@@ -949,6 +955,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/turkey.jpg")}
@@ -957,6 +964,7 @@ class Profile extends React.Component {
                     </div>
                     <div className="img-card col-lg-2 m-0 p-0 mr-3">
                       <img
+                        alt="..."
                         className="rounded shadow float-left w-100"
                         style={{ height: '328px',  objectFit: "cover" }}
                         src={require("assets/img/theme/karlsruhe.jpg")}

@@ -1,26 +1,13 @@
 import React from "react";
 
+import { NavLink } from "react-router-dom";
+
 // reactstrap components
 import {
-  FormGroup,
-  Form,
-  Input,
-  Button,
   Card,
-  CardHeader,
-  CardBody,
-  Progress,
-  Table,
   Container,
   Row,
-  Col,
-  Badge,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  Media,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
@@ -109,20 +96,53 @@ class Profile extends React.Component {
                     background: `url(${require("assets/img/theme/madrid.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
                     backgroundSize: 'cover'
                 }}>
-                  <a href="/in/trip/333">
+                  <NavLink to="/in/trip/333">
                     <Card className="card-trip-data-3">
                       <Row className="justify-content-center">
-                        <Col className="order-lg-2" lg="1">
-                          <div className="card-profile-image-mid-2">
-                            <a href="#pablo" onClick={e => e.preventDefault()}>
-                              <img
-                                alt="..."
-                                className="rounded-circle"
-                                src={require("assets/img/theme/team-4-800x800.jpg")}
-                              />
-                            </a>
-                          </div>
-                        </Col>
+                      <Col className="order-lg-4" lg="1">
+                        <div className="card-profile-image-small-2">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="rounded-circle"
+                              src={require("assets/img/theme/team-3-800x800.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Col>
+                      <Col className="order-lg-3" lg="1">
+                        <div className="card-profile-image-small-2">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="rounded-circle"
+                              src={require("assets/img/theme/team-2-800x800.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Col>
+                      <Col className="order-lg-2" lg="1">
+                        <div className="card-profile-image-small-2">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="rounded-circle"
+                              src={require("assets/img/theme/team-1-800x800.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Col>
+                      <Col className="order-lg-1" lg="1">
+                        <div className="card-profile-image-mid-2">
+                          <a href="#pablo" onClick={e => e.preventDefault()}>
+                            <img
+                              alt="..."
+                              className="rounded-circle"
+                              src={require("assets/img/theme/team-4-800x800.jpg")}
+                            />
+                          </a>
+                        </div>
+                      </Col>
                       </Row>
                       <Row className="mt-4 ml-1">
                         <h3 style={{ width: '90%' }}>Eurotrip</h3>
@@ -139,7 +159,7 @@ class Profile extends React.Component {
                         <i class="fas fa-comments text-blue" />
                       </h4>
                     </Card>
-                  </a>
+                  </NavLink>
                 </Card>
               </Col>
               <Col className="mb-5 mb-xl-0" xl="4">
