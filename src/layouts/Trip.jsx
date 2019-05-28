@@ -6,11 +6,12 @@ import { Container } from "reactstrap";
 import { AdminNavbar } from "components/Navbars/AdminNavbar.jsx";
 import { AdminFooter } from "components/Footers/AdminFooter.jsx";
 import { Sidebar } from "components/Sidebar/Sidebar.jsx";
-import TripInner from "views/Trip.jsx";
+import { TripInner } from "views/Trip.jsx";
 
 import routes from "routes.js";
 
 export const Trip = (props) => {
+
   useEffect(() => {
     document.body.scrollTop = 0;
   }, []);

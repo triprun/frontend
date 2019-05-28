@@ -1,6 +1,7 @@
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname,'src','index.js'),
@@ -9,15 +10,15 @@ module.exports = {
     filename: 'index.bundle.js'
   },
   mode: process.env.NODE_ENV || 'development',
-  resolve: {
-    modules: ['./src', 'node_modules']
-  },
   devServer: {
     contentBase: path.join(__dirname,'src')
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname,'public','index.html')
+    }),
+    new MomentLocalesPlugin({
+      localesToKeep: ['es-us', 'ru'],
     })
   ],
   module: {
@@ -36,8 +37,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg|eot|ttf|woff|woff2)$/,
+        test: /\.(mp3|eot|ttf|woff|woff2)$/,
         loaders: "file-loader?name=/src/assets/[name].[ext]"
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'src/[hash]-[name].[ext]'
+          }
+        }]
       }
     ]
   }

@@ -1,6 +1,6 @@
 import { Index } from "./views/Index.jsx";
 import Profile from "./views/Profile.jsx";
-import Plans from "./views/Plans.jsx";
+import { Plans } from "./views/Plans.jsx";
 import { Maps } from "./views/Maps.jsx";
 
 // import Register from "./views/examples/Register.jsx";

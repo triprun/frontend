@@ -26,9 +26,6 @@
     "minify-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
     "map-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -38,6 +35,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
+    "moment-locales-webpack-plugin": "^1.0.7",
     "node-sass": "^4.11.0",
     "nouislider": "^13.1.1",
     "react": "^16.8.4",
