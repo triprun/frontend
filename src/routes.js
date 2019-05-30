@@ -6,7 +6,7 @@ import { Maps } from "./views/Maps.jsx";
 // import Register from "./views/examples/Register.jsx";
 // import Login from "./views/examples/Login.jsx";
 
-import Tables from "./views/Tables.jsx";
+// import Tables from "./views/Tables.jsx";
 import Icons from "./views/Icons.jsx";
 
 var routes = [
@@ -21,19 +21,19 @@ var routes = [
   {
     path: "/plans",
     name: "My Plans",
-    icon: "ni ni-compass-04 text-orange",
+    icon: "ni ni-compass-04 text-info",
     component: Plans,
     layout: "/in",
     inner: false
   },
-  {
-    path: "/trips",
-    name: "My Trips",
-    icon: "ni ni-world text-green",
-    component: Tables,
-    layout: "/in",
-    inner: false
-  },
+  // {
+  //   path: "/trips",
+  //   name: "My Trips",
+  //   icon: "ni ni-world text-green",
+  //   component: Tables,
+  //   layout: "/in",
+  //   inner: false
+  // },
   {
     path: "/hots",
     name: "Today's Hotspots",

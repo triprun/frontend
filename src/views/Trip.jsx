@@ -405,6 +405,7 @@ export const TripInner = (props) => {
       case 'sightseeing': return (<><i className="fas fa-landmark text-gray fa-lg mr-2"></i><span className="text-gray">Sightseeing</span></>);
       case 'photoplace': return (<><i className="fas fa-camera-retro text-darker fa-lg mr-2"></i><span className="text-gray">Photo place</span></>);
       case 'favourites': return (<><i className="fas fa-star text-yellow fa-lg mr-2"></i><span className="text-gray">Favourites</span></>);
+      default: return (<><i className="fas fa-question text-blue fa-lg mr-2"></i><span className="text-gray">Custom Place</span></>);
     };
   };
 

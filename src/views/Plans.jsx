@@ -67,13 +67,128 @@ const mockedTrips = [{
     href: '#user_ID',
     avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
   }]
+},{
+  status: 1,
+  href: '#trip_ID',
+  background: 'https://i.ibb.co/1XB2xgm/madrid.jpg',
+  name: 'Dream Trip to Madrid',
+  date: 0,
+  places: [{
+    country: 'es',
+    cities: ['Madrid']
+  }],
+  companions: [{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/2dr2cSf/team-3-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/p3RYgXZ/team-2-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
+  }]
+},{
+  status: 0,
+  href: '/in/trip/333',
+  background: 'https://i.ibb.co/1XB2xgm/madrid.jpg',
+  name: 'Eurotrip',
+  date: 'Jun-Dec 2019',
+  places: [{
+    country: 'es',
+    cities: ['Madrid', 'Barcelona', 'Sevilla']
+  },{
+    country: 'it',
+    cities: ['Rome']
+  },{
+    country: 'fr',
+    cities: ['Paris']
+  }],
+  companions: [{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/2dr2cSf/team-3-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/p3RYgXZ/team-2-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/Y8KyHW6/team-1-800x800.jpg'
+  }]
+},{
+  status: 0,
+  href: '#trip_ID',
+  background: 'https://i.ibb.co/TWf5kRN/singapore.jpg',
+  name: 'Asiatrip',
+  date: 'Dec 2019-Jan 2020',
+  places: [{
+    country: 'sg',
+    cities: ['Singapore']
+  },{
+    country: 'id',
+    cities: ['Jakarta']
+  },{
+    country: 'my',
+    cities: ['Kuala Lumpur']
+  }],
+  companions: [{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/Y8KyHW6/team-1-800x800.jpg'
+  }]
+},{
+  status: 0,
+  href: '#trip_ID',
+  background: 'https://i.ibb.co/LC2md2n/japan.jpg',
+  name: 'Japanese Theme',
+  date: 'Mar 2020',
+  places: [{
+    country: 'jp',
+    cities: ['Tokyo']
+  }],
+  companions: [{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
+  }]
+},{
+  status: 0,
+  href: '#trip_ID',
+  background: 'https://i.ibb.co/m91qcrn/australia.jpg',
+  name: 'Australia',
+  date: 'Apr 2020',
+  places: [{
+    country: 'au',
+    cities: ['Sydney']
+  }],
+  companions: [{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
+  },{
+    fullName: '...',
+    href: '#user_ID',
+    avatar: 'https://i.ibb.co/p3RYgXZ/team-2-800x800.jpg'
+  }]
 }];
 
 export const Plans = () => {
 
-  const [endedTrips] = useState(mockedTrips);
-  // const [activeTrips] = useState(mockedTrips);
-  // const [planningTrips] = useState(mockedTrips);
+  const [endedTrips] = useState(mockedTrips.filter(trip => trip.status < 0));
+  const [activeTrips] = useState(mockedTrips.filter(trip => trip.status > 0));
+  const [planningTrips] = useState(mockedTrips.filter(trip => trip.status === 0));
 
   const visualizeCompanions = (companions) => {
     return companions.map(companion => {
@@ -123,10 +238,6 @@ export const Plans = () => {
 
   const visualizeTrips = (trips) => {
     return trips.map(trip => {
-      const comps = visualizeCompanions(trip.companions);
-      const flags = drawFlags(trip.places);
-      console.log(comps);
-      console.log(flags);
       return (<Col className="mb-5 mb-xl-0" xl="4">
         <Card
           className="card-trip-pic shadow"
@@ -134,18 +245,22 @@ export const Plans = () => {
             background: `url(${trip.background}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
             backgroundSize: 'cover'
         }}>
-          <Card className="card-trip-data-3">
-            <Row className="justify-content-center">
-              {visualizeCompanions(trip.companions)}
-            </Row>
-            <Row className="mt-4 ml-1">
-              <h3 style={{ width: '90%' }}>{trip.name}</h3>
-            </Row>
-            <Row className="mt--2 ml-1"><small>{trip.date}</small></Row>
-            <Row className="ml-1 mt-3">
-              {drawFlags(trip.places)}
-            </Row>
-          </Card>
+          <NavLink to={trip.href}>
+            <Card className="card-trip-data-3">
+              <Row className="justify-content-center">
+                {visualizeCompanions(trip.companions)}
+              </Row>
+              <Row className="mt-4 ml-1">
+                <h3 style={{ width: '90%' }}>{trip.name}</h3>
+                { trip.status >= 0 && <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i> }
+              </Row>
+              { trip.date !== 0 && <Row className="mt--2 ml-1"><small>{trip.date}</small></Row> }
+              <Row className="ml-1 mt-3">
+                {drawFlags(trip.places)}
+              </Row>
+              { trip.status >= 0 && <h4 className="text-right mt--3"><i className="fas fa-paperclip mr-3 text-gray" /><i class="fas fa-comments text-blue" /></h4> }
+            </Card>
+          </NavLink>
         </Card>
       </Col>);
     });
@@ -159,288 +274,13 @@ export const Plans = () => {
         <Col>
           <Col><h3 className="text-white">Active Trips</h3></Col>
           <Row>
-            <Col className="mb-5 mb-xl-0" xl="4">
-              <Card
-                className="card-trip-pic shadow"
-                style={{
-                  background: `url(${require("assets/img/theme/mallorca.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-                  backgroundSize: 'cover'
-              }}>
-                <Card className="card-trip-data-2">
-                  <Row className="justify-content-center">
-                    <Col className="order-lg-1" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-3-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-3" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-2-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-2" lg="1">
-                      <div className="card-profile-image-mid-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row className="mt-4 ml-1">
-                    <h3 style={{ width: '90%' }}>Dream Trip To Madrid</h3>
-                    <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i>
-                  </Row>
-                  <Row className="ml-1 mt-1">
-                    <p><FlagIcon className="rounded shadow mr-2" code="es" size="2x" squared={false} /></p>
-                    <p className="mt-1">Madrid</p>
-                  </Row>
-                  <h4 className="text-right mt--3">
-                    <i className="fas fa-paperclip mr-3 text-gray" />
-                    <i class="fas fa-comments mr-3 text-blue" />
-                    <i class="fas fa-map-marker-alt text-red" />
-                  </h4>
-                </Card>
-              </Card>
-            </Col>
+            {visualizeTrips(activeTrips)}
           </Row>
         </Col>
         <Col className="mt-6">
           <Col><h3 className="text-dark">Planning Trips</h3></Col>
           <Row style={{ minHeight: 320, flexWrap: "nowrap", overflowX: "auto" }}>
-            <Col className="mb-5 mb-xl-0" xl="4">
-              <Card
-                className="card-trip-pic shadow"
-                style={{
-                  background: `url(https://i.ibb.co/1XB2xgm/madrid.jpg), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-                  backgroundSize: 'cover'
-              }}>
-                <NavLink to="/in/trip/333">
-                  <Card className="card-trip-data-3">
-                    <Row className="justify-content-center">
-                    <Col className="order-lg-4" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-3-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-3" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-2-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-2" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-1-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-1" lg="1">
-                      <div className="card-profile-image-mid-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    </Row>
-                    <Row className="mt-4 ml-1">
-                      <h3 style={{ width: '90%' }}>Eurotrip</h3>
-                      <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i>
-                    </Row>
-                    <Row className="mt--2 ml-1"><small>Jun-Dec 2019</small></Row>
-                    <Row className="ml-1 mt-3">
-                      <p><FlagIcon className="rounded shadow mr-3" code="es" size="2x" squared={false} /></p>
-                      <p><FlagIcon className="rounded shadow mr-3" code="it" size="2x" squared={false} /></p>
-                      <p><FlagIcon className="rounded shadow mr-3" code="fr" size="2x" squared={false} /></p>
-                    </Row>
-                    <h4 className="text-right mt--3">
-                      <i className="fas fa-paperclip mr-3 text-gray" />
-                      <i class="fas fa-comments text-blue" />
-                    </h4>
-                  </Card>
-                </NavLink>
-              </Card>
-            </Col>
-            <Col className="mb-5 mb-xl-0" xl="4">
-              <Card
-                className="card-trip-pic shadow"
-                style={{
-                  background: `url(${require("assets/img/theme/singapore.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-                  backgroundSize: 'cover'
-              }}>
-                <Card className="card-trip-data-3">
-                  <Row className="justify-content-center">
-                    <Col className="order-lg-2" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-3-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-1" lg="2">
-                      <div className="card-profile-image-mid-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row className="mt-4 ml-1">
-                    <h3 style={{ width: '90%' }}>Asiatrip</h3>
-                    <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i>
-                  </Row>
-                  <Row className="mt--2 ml-1"><small>Dec 2019 - Jan 2020</small></Row>
-                  <Row className="ml-1 mt-3">
-                    <p><FlagIcon className="rounded shadow mr-3" code="sg" size="2x" squared={false} /></p>
-                    <p><FlagIcon className="rounded shadow mr-3" code="my" size="2x" squared={false} /></p>
-                    <p><FlagIcon className="rounded shadow mr-3" code="ch" size="2x" squared={false} /></p>
-                  </Row>
-                  <h4 className="text-right mt--3">
-                    <i className="fas fa-paperclip mr-3 text-gray" />
-                    <i class="fas fa-comments text-blue" />
-                  </h4>
-                </Card>
-              </Card>
-            </Col>
-            <Col className="mb-5 mb-xl-0" xl="4">
-              <Card
-                className="card-trip-pic shadow"
-                style={{
-                  background: `url(${require("assets/img/theme/japan.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-                  backgroundSize: 'cover'
-              }}>
-                <Card className="card-trip-data-3">
-                  <Row className="justify-content-center">
-                    <Col className="order-lg-2" lg="1">
-                      <div className="card-profile-image-mid-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row className="mt-4 ml-1">
-                    <h3 style={{ width: '90%' }}>Japanese Theme</h3>
-                    <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i>
-                  </Row>
-                  <Row className="mt--2 ml-1"><small>Mar 2020</small></Row>
-                  <Row className="ml-1 mt-3">
-                    <p><FlagIcon className="rounded shadow mr-3" code="jp" size="2x" squared={false} /></p>
-                    <p>Tokyo</p>
-                  </Row>
-                  <h4 className="text-right mt--3">
-                    <i className="fas fa-paperclip mr-3 text-gray" />
-                    <i class="fas fa-comments text-blue" />
-                  </h4>
-                </Card>
-              </Card>
-            </Col>
-            <Col className="mb-5 mb-xl-0" xl="4">
-              <Card
-                className="card-trip-pic shadow"
-                style={{
-                  background: `url(${require("assets/img/theme/australia.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-                  backgroundSize: 'cover'
-              }}>
-                <Card className="card-trip-data-3">
-                  <Row className="justify-content-center">
-                    <Col className="order-lg-1" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-3-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-3" lg="1">
-                      <div className="card-profile-image-small-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-2-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                    <Col className="order-lg-2" lg="1">
-                      <div className="card-profile-image-mid-2">
-                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
-                            alt="..."
-                            className="rounded-circle"
-                            src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
-                        </a>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row className="mt-4 ml-1">
-                    <h3 style={{ width: '90%' }}>Australia</h3>
-                    <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i>
-                  </Row>
-                  <Row className="mt--2 ml-1"><small>Apr 2020</small></Row>
-                  <Row className="ml-1 mt-3">
-                    <p><FlagIcon className="rounded shadow mr-3" code="au" size="2x" squared={false} /></p>
-                    <p>Sydney</p>
-                  </Row>
-                  <h4 className="text-right mt--3">
-                    <i className="fas fa-paperclip mr-3 text-gray" />
-                    <i class="fas fa-comments text-blue" />
-                  </h4>
-                </Card>
-              </Card>
-            </Col>
+            {visualizeTrips(planningTrips)}
           </Row>
         </Col>
         <Col className="mt-6">

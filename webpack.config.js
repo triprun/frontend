@@ -9,6 +9,9 @@ module.exports = {
     path: path.join(__dirname,'build'),
     filename: 'index.bundle.js'
   },
+  resolve: {
+    modules: ['./src', 'node_modules']
+  },
   mode: process.env.NODE_ENV || 'development',
   devServer: {
     contentBase: path.join(__dirname,'src')
@@ -18,7 +21,7 @@ module.exports = {
       template: path.join(__dirname,'public','index.html')
     }),
     new MomentLocalesPlugin({
-      localesToKeep: ['es-us', 'ru'],
+      localesToKeep: ['es-us', 'ru']
     })
   ],
   module: {
