@@ -92,6 +92,7 @@ const mockedTrips = [{
   }]
 },{
   status: 0,
+  notification: 1, // defines badge on bell icon
   href: '/in/trip/333',
   background: 'https://i.ibb.co/1XB2xgm/madrid.jpg',
   name: 'Eurotrip',
@@ -220,7 +221,7 @@ export const Plans = () => {
               squared={false}
             />
           </p>
-          <p>{place.cities[0]}</p>
+          <p style={{ color: 'gray' }}>{place.cities[0]}</p>
         </>
       );
       return (
@@ -251,10 +252,10 @@ export const Plans = () => {
                 {visualizeCompanions(trip.companions)}
               </Row>
               <Row className="mt-4 ml-1">
-                <h3 style={{ width: '90%' }}>{trip.name}</h3>
-                { trip.status >= 0 && <i class="fas fa-bell fa-lg mt--4"><sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup></i> }
+                <h3 style={{ width: '90%', color: 'black' }}>{trip.name}</h3>
+                { trip.status >= 0 && <i class="fas fa-bell fa-lg mt--4">{ trip.notification && <sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup> }</i> }
               </Row>
-              { trip.date !== 0 && <Row className="mt--2 ml-1"><small>{trip.date}</small></Row> }
+              { trip.date !== 0 && <Row className="mt--2 ml-1"><small style={{ color: 'gray' }}>{trip.date}</small></Row> }
               <Row className="ml-1 mt-3">
                 {drawFlags(trip.places)}
               </Row>

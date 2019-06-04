@@ -291,8 +291,14 @@ const mockedData = {
     },
     {
       country: 'fr',
-      cities: null,
       arriveWith: 1,
+      cities: [
+        {
+          city: 'Paris',
+          arriveWith: 0,
+          places: null
+        }
+      ]
     }
   ],
   chat: [{
@@ -382,6 +388,9 @@ export const TripInner = (props) => {
   };
 
   const fetchCities = (country) => {
+    if(!country.cities) return (
+      <></>
+    );
     return country.cities.map(block => {
       if(block.city === activeCity.city) return (
         <>
@@ -418,6 +427,7 @@ export const TripInner = (props) => {
   };
 
   const fetchCards = (city) => {
+    if(!city.places) return (<></>);
     return city.places.map(place => {
       return (
         <Card className="rounded shadow mb-4 px-3" style={{ minHeight: "260px" }}>
@@ -647,7 +657,7 @@ export const TripInner = (props) => {
                   <Card className="card-date shadow mb-2 text-center pt-2">
                     <h4>Overview</h4>
                   </Card>
-                  { prepDates(activeCity.places.map(place => {
+                  { activeCity.places && prepDates(activeCity.places.map(place => {
                     if(place.duration && Number.parseInt((((place.duration / 1000) / 60) / 60) / 24) > 0) {
                       let dates = [];
                       for(let i = 0; i < Number.parseInt((((place.duration / 1000) / 60) / 60) / 24); i++) {
