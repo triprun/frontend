@@ -11,7 +11,7 @@ export const PlansHeader = () => {
         style={{
           minHeight: "370px",
           backgroundImage:
-            "url(" + require("assets/img/theme/map2.jpg") + ")",
+            "url(https://i.ibb.co/C0LyQ0m/map2.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center top"
         }}

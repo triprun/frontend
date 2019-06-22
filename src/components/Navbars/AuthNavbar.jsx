@@ -22,7 +22,7 @@ export const AuthNavbar = () => {
       >
         <Container className="px-4">
           <NavbarBrand to="/" tag={Link}>
-            <img alt="..." src={require("assets/img/brand/argon-react-white.png")} />
+            <p>TripRun</p>
           </NavbarBrand>
           <button className="navbar-toggler" id="navbar-collapse-main">
             <span className="navbar-toggler-icon" />
@@ -32,10 +32,7 @@ export const AuthNavbar = () => {
               <Row>
                 <Col className="collapse-brand" xs="6">
                   <Link to="/">
-                    <img
-                      alt="..."
-                      src={require("assets/img/brand/argon-react.png")}
-                    />
+                    <p>TripRun</p>
                   </Link>
                 </Col>
                 <Col className="collapse-close" xs="6">

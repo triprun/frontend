@@ -27,6 +27,8 @@ import { TripHeader } from "components/Headers/TripHeader.jsx";
 
 import runningMan from "assets/img/icons/running.svg";
 
+const { pictures } = require("./pictures");
+
 const users = [
   {
     id: 1,
@@ -693,7 +695,7 @@ export const TripInner = (props) => {
                     <img
                       alt="..."
                       className="rounded-circle"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
+                      src={pictures.team1}
                     />
                   </a>
                   <UncontrolledTooltip
@@ -711,7 +713,7 @@ export const TripInner = (props) => {
                     <img
                       alt="..."
                       className="rounded-circle"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
+                      src={pictures.team2}
                     />
                   </a>
                   <UncontrolledTooltip
@@ -729,7 +731,7 @@ export const TripInner = (props) => {
                     <img
                       alt="..."
                       className="rounded-circle"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
+                      src={pictures.team3}
                     />
                   </a>
                   <UncontrolledTooltip
@@ -747,7 +749,7 @@ export const TripInner = (props) => {
                     <img
                       alt="..."
                       className="rounded-circle"
-                      src={require("assets/img/theme/team-4-800x800.jpg")}
+                      src={pictures.team4}
                     />
                   </a>
                   <UncontrolledTooltip
@@ -794,7 +796,7 @@ export const TripInner = (props) => {
             </CardBody>
           </Card>
           <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${require("assets/img/theme/passport.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
+            background: `url(${pictures.passport}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
             backgroundSize: 'cover'
           }}>
             <CardHeader className="bg-transparent">
@@ -812,7 +814,7 @@ export const TripInner = (props) => {
             </CardBody>
           </Card>
           <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${require("assets/img/theme/plane.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
+            background: `url(${pictures.planMap}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
             backgroundSize: 'cover'
           }}>
             <CardHeader className="bg-transparent">
@@ -830,7 +832,7 @@ export const TripInner = (props) => {
             </CardBody>
           </Card>
           <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${require("assets/img/theme/cars.jpg")}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
+            background: `url(${pictures.cars}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
             backgroundSize: 'cover'
           }}>
             <CardHeader className="bg-transparent">
@@ -852,7 +854,7 @@ export const TripInner = (props) => {
       <Row className="mb-4">
         <Col className="mb-5 mb-xl-0" xl="12">
           <Card className="bg-gradient-white shadow">
-            <img alt="..." className="rounded" style={{ width: "100%" }} src={require("assets/img/theme/planMap.jpg")} />
+            <img alt="..." className="rounded" style={{ width: "100%" }} src={pictures.planMap} />
           </Card>
         </Col>
       </Row>

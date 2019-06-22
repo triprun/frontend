@@ -11,7 +11,7 @@ export const UserHeader = () => {
         style={{
           minHeight: "370px",
           backgroundImage:
-            "url(" + require("assets/img/theme/map.jpg") + ")",
+            "url(https://i.ibb.co/gjXtpNH/map.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center top"
         }}

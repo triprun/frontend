@@ -13,9 +13,10 @@ import {
 
 import { Header } from 'components/Headers/Header.jsx';
 
+const { pictures } = require('./pictures');
+
 export const Index = () => {
   // const [apiKey, setApiKey] = useState('12e2ab5231ccfcadaf710645bb7b9eff');
-
   return (
     <>
       <Header />
@@ -47,7 +48,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/cave.jpg")}
+                      src={pictures.cave}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -56,7 +57,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/yellowstone.jpg")}
+                      src={pictures.yellowstone}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -65,7 +66,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/beach.jpg")}
+                      src={pictures.beach}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -74,7 +75,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/baikal.jpg")}
+                      src={pictures.baikal}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -83,7 +84,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/italy.jpg")}
+                      src={pictures.italy}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -92,7 +93,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/turkey.jpg")}
+                      src={pictures.kricket}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -101,7 +102,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', height: '328px',  objectFit: "cover" }}
-                      src={require("assets/img/theme/karlsruhe.jpg")}
+                      src={pictures.karlsruhe}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -397,7 +398,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/crave.jpg")}
+                      src={pictures.crave}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -406,7 +407,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/holland.jpg")}
+                      src={pictures.holland}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -415,7 +416,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/kricket.jpg")}
+                      src={pictures.kricket}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -424,7 +425,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/kafka.jpg")}
+                      src={pictures.kafka}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -433,7 +434,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/tower.jpg")}
+                      src={pictures.tower}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -442,7 +443,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/bridge.jpg")}
+                      src={pictures.bridge}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
@@ -451,7 +452,7 @@ export const Index = () => {
                       alt="..."
                       className="rounded shadow float-left"
                       style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: "cover" }}
-                      src={require("assets/img/theme/karlsruhe.jpg")}
+                      src={pictures.karlsruhe}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>

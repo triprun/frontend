@@ -105,7 +105,7 @@ export const Sidebar = (props) => {
                 <span className="avatar avatar-sm rounded-circle">
                   <img
                     alt="..."
-                    src={require("assets/img/theme/team-1-800x800.jpg")}
+                    src="https://i.ibb.co/Y8KyHW6/team-1-800x800.jpg"
                   />
                 </span>
               </Media>

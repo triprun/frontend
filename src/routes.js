@@ -1,5 +1,5 @@
 import { Index } from "./views/Index.jsx";
-import Profile from "./views/Profile.jsx";
+import { Profile } from "./views/Profile.jsx";
 import { Plans } from "./views/Plans.jsx";
 import { Maps } from "./views/Maps.jsx";
 
