@@ -12,16 +12,16 @@ import {
   InputGroupText,
   Input,
   InputGroup,
-  Navbar,
+  Navbar as NavBar,
   Nav,
   Container,
   Media
 } from "reactstrap";
 
-export const AdminNavbar = (props) => {
+export const Navbar = (props) => {
   return (
     <>
-      <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
+      <NavBar className="navbar-top navbar-dark" expand="md" id="navbar-main">
         <Container fluid>
           <Link
             className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
@@ -48,7 +48,7 @@ export const AdminNavbar = (props) => {
                   <span className="avatar avatar-sm rounded-circle">
                     <img
                       alt="..."
-                      src={require("../../assets/img/theme/team-4-800x800.jpg")}
+                      src="https://i.ibb.co/CwwjFzq/team-4-800x800.jpg"
                     />
                   </span>
                   <Media className="ml-2 d-none d-lg-block">
@@ -87,7 +87,7 @@ export const AdminNavbar = (props) => {
             </UncontrolledDropdown>
           </Nav>
         </Container>
-      </Navbar>
+      </NavBar>
     </>
   );
 }

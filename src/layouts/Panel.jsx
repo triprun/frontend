@@ -3,13 +3,13 @@ import { Route, Switch } from "react-router-dom";
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
-import { AdminNavbar } from "components/Navbars/AdminNavbar.jsx";
-import { AdminFooter } from "components/Footers/AdminFooter.jsx";
+import { Navbar } from "components/Navbars/Navbar.jsx";
+import { Footer } from "components/Footers/Footer.jsx";
 import { Sidebar } from "components/Sidebar/Sidebar.jsx";
 
 import routes from "routes.js";
 
-export const Admin = (props) => {
+export const Panel = (props) => {
   const getRoutes = routes => routes.map((prop, key) => {
     return prop.layout !== "/in" || prop.inner ? null : (
       <Route
@@ -37,13 +37,13 @@ export const Admin = (props) => {
     <>
       <Sidebar {...props} routes={routes} />
       <div className="main-content">
-        <AdminNavbar
+        <Navbar
           {...props}
           brandText={getBrandText(props.location.pathname)}
         />
         <Switch>{getRoutes(routes)}</Switch>
         <Container fluid>
-          <AdminFooter />
+          <Footer />
         </Container>
       </div>
     </>

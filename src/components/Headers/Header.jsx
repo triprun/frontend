@@ -13,7 +13,7 @@ export const Header = () => {
           <div className="header-body">
             {/* Card stats */}
             <Row>
-              <Col lg="6" xl="3">
+              <Col md="3">
                 <Card className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>

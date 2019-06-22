@@ -909,7 +909,7 @@ export const Profile = () => {
               </CardHeader>
               <CardBody>
                 <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -918,7 +918,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -927,7 +927,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -936,7 +936,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -945,7 +945,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -954,7 +954,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"
@@ -963,7 +963,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                  <div className="img-card col-lg-2 m-0 p-0 mr-3">
+                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
                       className="rounded shadow float-left w-100"

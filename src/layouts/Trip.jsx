@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
-import { AdminNavbar } from "components/Navbars/AdminNavbar.jsx";
-import { AdminFooter } from "components/Footers/AdminFooter.jsx";
+import { Navbar } from "components/Navbars/Navbar.jsx";
+import { Footer } from "components/Footers/Footer.jsx";
 import { Sidebar } from "components/Sidebar/Sidebar.jsx";
 import { TripInner } from "views/Trip.jsx";
 
@@ -30,14 +30,14 @@ export const Trip = (props) => {
     <>
       <Sidebar {...props} routes={routes} />
       <div className="main-content">
-        <AdminNavbar
+        <Navbar
           {...props}
           brandText="Trip Overview"
         />
         <Switch>{getRoutes(routes)}</Switch>
         <TripInner {...props} />
         <Container fluid>
-          <AdminFooter />
+          <Footer />
         </Container>
       </div>
     </>

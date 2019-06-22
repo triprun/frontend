@@ -4,7 +4,7 @@ import React from "react";
 // reactstrap components
 import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
 
-export const AdminFooter = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <Row className="align-items-center justify-content-xl-between">
