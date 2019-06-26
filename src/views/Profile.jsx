@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -17,12 +17,13 @@ import {
   DropdownToggle,
   Media,
   UncontrolledTooltip
-} from "reactstrap";
+} from 'reactstrap';
 
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
-import { UserHeader } from "components/Headers/UserHeader.jsx";
+import { UserHeader } from 'components/Headers/UserHeader.jsx';
+import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
 
 const { pictures } = require('./pictures');
 
@@ -152,7 +153,7 @@ export const Profile = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <span className="mr-2 text-green"><i class="fas fa-user-friends" /> New companion invited</span>
+                          <span className="mr-2 text-green"><i className="fas fa-user-friends" /> New companion invited</span>
                         </div>
                       </td>
                     </tr>
@@ -257,7 +258,7 @@ export const Profile = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <span className="mr-2 text-danger"><i class="fas fa-user-times" /> Companion left</span>
+                          <span className="mr-2 text-danger"><i className="fas fa-user-times" /> Companion left</span>
                         </div>
                       </td>
                     </tr>
@@ -362,7 +363,7 @@ export const Profile = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <span className="mr-2 text-info"><i class="fas fa-monument" /> New place suggested</span>
+                          <span className="mr-2 text-info"><i className="fas fa-monument" /> New place suggested</span>
                         </div>
                       </td>
                     </tr>
@@ -467,7 +468,7 @@ export const Profile = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <span className="mr-2 text-info"><i class="fas fa-poll" /> New poll created</span>
+                          <span className="mr-2 text-info"><i className="fas fa-poll" /> New poll created</span>
                         </div>
                       </td>
                     </tr>
@@ -908,7 +909,7 @@ export const Profile = () => {
                 </Row>
               </CardHeader>
               <CardBody>
-                <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
+                <ScrollRow>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
@@ -972,7 +973,7 @@ export const Profile = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                </Row>
+                </ScrollRow>
               </CardBody>
             </Card>
           </Col>

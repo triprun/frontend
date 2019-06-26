@@ -12,6 +12,7 @@ import {
 } from 'reactstrap';
 
 import { Header } from 'components/Headers/Header.jsx';
+import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
 
 const { pictures } = require('./pictures');
 
@@ -42,7 +43,7 @@ export const Index = () => {
                 </Row>
               </CardHeader>
               <CardBody>
-                <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
+                <ScrollRow>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
                     <img
                       alt="..."
@@ -106,7 +107,7 @@ export const Index = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                </Row>
+                </ScrollRow>
               </CardBody>
             </Card>
           </Col>
@@ -392,7 +393,7 @@ export const Index = () => {
                 </Row>
               </CardHeader>
               <CardBody>
-                <Row style={{ flexWrap: "nowrap", overflowY: "hidden", overflowX: "auto" }}>
+                <ScrollRow>
                   <div className="img-card col-lg-3 m-0 p-0 mr-3">
                     <img
                       alt="..."
@@ -456,7 +457,7 @@ export const Index = () => {
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
-                </Row>
+                </ScrollRow>
               </CardBody>
             </Card>
           </Col>

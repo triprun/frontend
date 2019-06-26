@@ -14,6 +14,7 @@ import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
 import PlansHeader from "components/Headers/PlansHeader.jsx";
+import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
 
 const mockedTrips = [{
   status: -1,
@@ -239,7 +240,7 @@ export const Plans = () => {
 
   const visualizeTrips = (trips) => {
     return trips.map(trip => {
-      return (<Col className="mb-5 mb-xl-0" xl="4">
+      return (<Col className="col-12 mr-0 mr-md-0 mb-5 mb-xl-0" xl="4">
         <Card
           className="card-trip-pic shadow"
           style={{
@@ -274,21 +275,21 @@ export const Plans = () => {
       <Container className="mt--7 mb-8" fluid>
         <Col>
           <Col><h3 className="text-white">Active Trips</h3></Col>
-          <Row>
+          <ScrollRow style={{ minHeight: 290 }}>
             {visualizeTrips(activeTrips)}
-          </Row>
+          </ScrollRow>
         </Col>
         <Col className="mt-6">
           <Col><h3 className="text-dark">Planning Trips</h3></Col>
-          <Row style={{ minHeight: 320, flexWrap: "nowrap", overflowX: "auto" }}>
+          <ScrollRow style={{ minHeight: 290 }}>
             {visualizeTrips(planningTrips)}
-          </Row>
+          </ScrollRow>
         </Col>
         <Col className="mt-6">
           <Col><h3 className="text-dark">Ended Trips</h3></Col>
-          <Row>
+          <ScrollRow style={{ minHeight: 290 }}>
             {visualizeTrips(endedTrips)}
-          </Row>
+          </ScrollRow>
         </Col>
       </Container>
     </>
