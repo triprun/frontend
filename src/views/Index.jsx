@@ -13,6 +13,7 @@ import {
 
 import { Header } from 'components/Headers/Header.jsx';
 import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
+import { StoryImage } from 'components/Micro/StoryImage.jsx';
 
 const { pictures } = require('./pictures');
 
@@ -45,64 +46,57 @@ export const Index = () => {
               <CardBody>
                 <ScrollRow>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px', objectFit: 'cover' }}
                       src={pictures.cave}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.yellowstone}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.beach}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.baikal}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.italy}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.kricket}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-6 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', height: '328px',  objectFit: 'cover' }}
                       src={pictures.karlsruhe}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
@@ -395,64 +389,57 @@ export const Index = () => {
               <CardBody>
                 <ScrollRow>
                   <div className="img-card col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.crave}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.holland}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.kricket}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.kafka}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.tower}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.bridge}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-3 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
                       className="rounded shadow float-left"
-                      style={{ width: '100%', minHeight: '328px', maxHeight: '328px', objectFit: 'cover' }}
                       src={pictures.karlsruhe}
                     />
                     <p className="img-desc rounded">This is hovered text</p>

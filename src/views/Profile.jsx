@@ -24,6 +24,7 @@ import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 // core components
 import { UserHeader } from 'components/Headers/UserHeader.jsx';
 import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
+import { StoryImage } from 'components/Micro/StoryImage.jsx';
 
 const { pictures } = require('./pictures');
 
@@ -911,64 +912,57 @@ export const Profile = () => {
               <CardBody>
                 <ScrollRow>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px', objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.cave}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.yellowstone}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.beach}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.baikal}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.italy}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.turkey}
                     />
                     <p className="img-desc rounded">This is hovered text</p>
                   </div>
                   <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <img
+                    <StoryImage
                       alt="..."
-                      className="rounded shadow float-left w-100"
-                      style={{ height: '328px',  objectFit: "cover" }}
+                      className="rounded shadow float-left"
                       src={pictures.karlsruhe}
                     />
                     <p className="img-desc rounded">This is hovered text</p>

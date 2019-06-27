@@ -26,7 +26,7 @@ export const Footer = () => {
           <Nav className="nav-footer justify-content-center justify-content-xl-end">
             <NavItem>
               <NavLink
-                href="https://medium.com/triprun/about-company"
+                href="https://medium.com/@triprunofficial"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -36,7 +36,7 @@ export const Footer = () => {
 
             <NavItem>
               <NavLink
-                href="https://medium.com/triprun"
+                href="https://medium.com/@triprunofficial"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -46,7 +46,7 @@ export const Footer = () => {
 
             <NavItem>
               <NavLink
-                href="https://medium.com/triprun/policy"
+                href="https://medium.com/@triprunofficial"
                 rel="noopener noreferrer"
                 target="_blank"
               >
