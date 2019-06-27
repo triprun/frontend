@@ -1,5 +1,3 @@
-import { Row } from 'reactstrap';
-
 import styled from 'styled-components';
 
 export const StoryImage = styled.img`
