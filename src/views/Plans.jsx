@@ -275,19 +275,19 @@ export const Plans = () => {
       <Container className="mt--7 mb-8" fluid>
         <Col>
           <Col><h3 className="text-white">Active Trips</h3></Col>
-          <ScrollRow style={{ minHeight: 290 }}>
+          <ScrollRow style={{ minHeight: 310 }}>
             {visualizeTrips(activeTrips)}
           </ScrollRow>
         </Col>
         <Col className="mt-6">
           <Col><h3 className="text-dark">Planning Trips</h3></Col>
-          <ScrollRow style={{ minHeight: 290 }}>
+          <ScrollRow style={{ minHeight: 310 }}>
             {visualizeTrips(planningTrips)}
           </ScrollRow>
         </Col>
         <Col className="mt-6">
           <Col><h3 className="text-dark">Ended Trips</h3></Col>
-          <ScrollRow style={{ minHeight: 290 }}>
+          <ScrollRow style={{ minHeight: 310 }}>
             {visualizeTrips(endedTrips)}
           </ScrollRow>
         </Col>

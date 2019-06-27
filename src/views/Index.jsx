@@ -118,7 +118,7 @@ export const Index = () => {
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Best tickets<sup class="text-green"><small>visa free</small></sup></h3>
+                    <h3 className="mb-0">Top tickets<sup class="text-green"><small>visa free</small></sup></h3>
                   </div>
                   <div className="col text-right">
                     <Button
@@ -462,13 +462,13 @@ export const Index = () => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-5">
+        <Row className="mt-5 d-none d-md-flex">
           <Col className="mb-5 mb-xl-0" xl="6">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h3 className="mb-0">Best tickets</h3>
+                    <h3 className="mb-0">Top tickets</h3>
                   </div>
                   <div className="col text-right">
                     <Button

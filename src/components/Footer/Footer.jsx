@@ -4,7 +4,7 @@ import React from "react";
 // reactstrap components
 import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
 
-export const AuthFooter = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <Row className="align-items-center justify-content-xl-between">
@@ -26,7 +26,7 @@ export const AuthFooter = () => {
           <Nav className="nav-footer justify-content-center justify-content-xl-end">
             <NavItem>
               <NavLink
-                href="https://www.creative-tim.com/presentation?ref=adr-admin-footer"
+                href="https://medium.com/triprun/about-company"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -36,7 +36,7 @@ export const AuthFooter = () => {
 
             <NavItem>
               <NavLink
-                href="http://blog.creative-tim.com?ref=adr-admin-footer"
+                href="https://medium.com/triprun"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -46,7 +46,7 @@ export const AuthFooter = () => {
 
             <NavItem>
               <NavLink
-                href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
+                href="https://medium.com/triprun/policy"
                 rel="noopener noreferrer"
                 target="_blank"
               >

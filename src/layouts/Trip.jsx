@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { Container } from "reactstrap";
 // core components
 import { Navbar } from "components/Navbars/Navbar.jsx";
-import { Footer } from "components/Footers/Footer.jsx";
+import { Footer } from "components/Footer/Footer.jsx";
 import { Sidebar } from "components/Sidebar/Sidebar.jsx";
 import { TripInner } from "views/Trip.jsx";
 

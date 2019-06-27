@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 
 // core components
 import { AuthNavbar } from "components/Navbars/AuthNavbar.jsx";
-import { AuthFooter } from "components/Footers/AuthFooter.jsx";
+import { Footer } from "components/Footer/Footer.jsx";
 
 import routes from "routes.js";
 
@@ -60,7 +60,7 @@ export const Auth = () => {
           </Row>
         </Container>
       </div>
-      <AuthFooter />
+      <Footer />
     </>
   );
 }

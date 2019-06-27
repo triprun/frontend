@@ -42,6 +42,8 @@ var ps;
 
 export const Sidebar = (props) => {
 
+  const { avatar } = { avatar: "https://i.ibb.co/Y8KyHW6/team-1-800x800.jpg" }; // JSON.parse(localStorage.getItem('user'));
+
   const [bgColor, setBgColor] = useState(props.bgColor);
   const [routes, setRoutes] = useState(props.routes);
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -68,7 +70,6 @@ export const Sidebar = (props) => {
             tag={NavLinkRRD}
             onClick={closeCollapse}
             activeClassName="active"
-            disabled={prop.name === 'Recommended' ? true : false}
           >
             <i className={prop.icon} />
             {prop.name}
@@ -105,22 +106,15 @@ export const Sidebar = (props) => {
                 <span className="avatar avatar-sm rounded-circle">
                   <img
                     alt="..."
-                    src="https://i.ibb.co/Y8KyHW6/team-1-800x800.jpg"
+                    src={avatar}
                   />
                 </span>
               </Media>
             </DropdownToggle>
             <DropdownMenu className="dropdown-menu-arrow" right>
-              <DropdownItem className="noti-title" header tag="div">
-                <h6 className="text-overflow m-0">{`<%Username%>`}</h6>
-              </DropdownItem>
               <DropdownItem to="/admin/user-profile" tag={Link}>
                 <i className="ni ni-single-02" />
                 <span>My profile</span>
-              </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
-                <i className="ni ni-settings-gear-65" />
-                <span>Settings</span>
               </DropdownItem>
               <DropdownItem to="/admin/user-profile" tag={Link}>
                 <i className="ni ni-calendar-grid-58" />
@@ -143,7 +137,7 @@ export const Sidebar = (props) => {
           {/* Collapse header */}
           <div className="navbar-collapse-header d-md-none">
             <Row>
-              <Col className="collapse-close" xs="6">
+              <Col className="collapse-close" xs="2">
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -153,6 +147,7 @@ export const Sidebar = (props) => {
                   <span />
                 </button>
               </Col>
+              <h3 className="mt-2 mb--1">Trip<img style={{ height: '18px' }} src={runningMan} />un Menu</h3>
             </Row>
           </div>
           {/* Form */}
