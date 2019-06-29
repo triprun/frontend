@@ -1,9 +1,6 @@
 import React from 'react';
-
 import { NavLink } from "react-router-dom";
-
 import { Col, Row, Card } from 'reactstrap';
-
 import styled from 'styled-components';
 
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
@@ -60,11 +57,11 @@ const TripName = styled.h3`
 const visualizeCompanions = (companions) => {
   return companions.map(companion => {
     return (
-      <Col className="order-lg-1 col-lg-1">
+      <Col className="order-lg-1 col-2 col-md-1">
         <ProfileImage>
-          <a href={companion.href} onClick={e => e.preventDefault()}>
+          <NavLink to={companion.href}>
             <img alt={companion.fullName} className="rounded-circle" src={companion.avatar} />
-          </a>
+          </NavLink>
         </ProfileImage>
       </Col>
     );
@@ -109,13 +106,13 @@ export const TripCard = ({ trip }) => {
           </Row>
           <Row className="mt-4 ml-1">
             <TripName>{trip.name}</TripName>
-            { trip.status >= 0 && <i class="fas fa-bell fa-lg mt--4">{ trip.notification && <sup><small><i class="fas fa-circle fa-xs ml--2 text-red" /></small></sup> }</i> }
+            { trip.status >= 0 && <i className="fas fa-bell fa-lg mt--4">{ trip.notification && <sup><small><i className="fas fa-circle fa-xs ml--2 text-red" /></small></sup> }</i> }
           </Row>
           { trip.date !== 0 && <Row className="mt--2 ml-1"><small style={{ color: 'gray' }}>{trip.date}</small></Row> }
           <Row className="ml-1 mt-3">
             { drawFlags(trip.places) }
           </Row>
-          { trip.status >= 0 && <h4 className="text-right mt--3"><i className="fas fa-paperclip mr-3 text-gray" /><i class="fas fa-comments text-blue" /></h4> }
+          { trip.status >= 0 && <h4 className="text-right mt--3"><i className="fas fa-paperclip mr-3 text-gray" /><i className="fas fa-comments text-blue" /></h4> }
         </CardFront>
       </NavLink>
     </CardBack>
