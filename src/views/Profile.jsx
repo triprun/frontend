@@ -911,62 +911,13 @@ export const Profile = () => {
               </CardHeader>
               <CardBody>
                 <ScrollRow>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.cave}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.yellowstone}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.beach}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.baikal}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.italy}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.turkey}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
-                  <div className="img-card col-8 col-lg-2 m-0 p-0 mr-3">
-                    <StoryImage
-                      alt="..."
-                      className="rounded shadow float-left"
-                      src={pictures.karlsruhe}
-                    />
-                    <p className="img-desc rounded">This is hovered text</p>
-                  </div>
+                  <StoryImage width={2} source={pictures.cave} />
+                  <StoryImage width={2} source={pictures.yellowstone} />
+                  <StoryImage width={2} source={pictures.beach} />
+                  <StoryImage width={2} source={pictures.baikal} />
+                  <StoryImage width={2} source={pictures.italy} />
+                  <StoryImage width={2} source={pictures.turkey} />
+                  <StoryImage width={2} source={pictures.karlsruhe} />
                 </ScrollRow>
               </CardBody>
             </Card>

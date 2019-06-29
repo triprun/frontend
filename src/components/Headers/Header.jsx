@@ -1,9 +1,10 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { Card, CardBody, CardTitle, Container, Col } from "reactstrap";
 
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
+import { Row } from "components/Micro/Row.jsx";
 
 export const Header = () => {
   return (

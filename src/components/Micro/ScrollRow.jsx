@@ -1,8 +1,8 @@
-import { Row } from 'reactstrap';
-
 import styled from 'styled-components';
 
-export const ScrollRow = styled(Row)`
+export const ScrollRow = styled.div`
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   overflow-y: hidden;
   overflow-x: auto;

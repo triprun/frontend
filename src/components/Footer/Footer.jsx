@@ -2,7 +2,9 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col, Nav, NavItem, NavLink } from "reactstrap";
+import { Container, Col, Nav, NavItem, NavLink } from "reactstrap";
+
+import { Row } from "components/Micro/Row.jsx";
 
 export const Footer = () => {
   return (

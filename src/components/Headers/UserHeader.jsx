@@ -1,7 +1,9 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
+
+import { Row } from "components/Micro/Row.jsx";
 
 export const UserHeader = () => {
   return (

@@ -1,9 +1,11 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
 
 import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
+
+import { Row } from "components/Micro/Row.jsx";
 
 export const TripHeader = (props) => {
 

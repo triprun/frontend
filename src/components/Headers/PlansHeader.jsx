@@ -1,7 +1,9 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
+import { Button, Container, Col } from "reactstrap";
+
+import { Row } from "components/Micro/Row.jsx";
 
 export const PlansHeader = () => {
   return (
