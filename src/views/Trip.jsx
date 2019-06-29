@@ -24,6 +24,7 @@ import moment from 'moment';
 
 // core components
 import { TripHeader } from "components/Headers/TripHeader.jsx";
+import { PlaceType } from "components/Micro/PlaceType.jsx";
 
 import runningMan from "assets/img/icons/running.svg";
 
@@ -385,7 +386,7 @@ export const TripInner = (props) => {
       return (<i className="fas fa-train mt--2 text-darker"></i>);
       case 3:
       return (<i className="fas fa-plane mt--2 text-darker"></i>);
-      default: return (<i class="fas fa-walking mt--2 text-darker"></i>);
+      default: return (<i className="fas fa-walking mt--2 text-darker"></i>);
     };
   };
 
@@ -479,8 +480,11 @@ export const TripInner = (props) => {
                 </Row>
               </Row>
             </Col>
-            <Col xl="4" style={{ overflow: "hidden" }} >
+            <Col className="d-none d-md-flex" xl="4" style={{ overflow: "hidden" }} >
               <img alt="..." className="rounded-right" style={{ width: "108%", height: "260px", objectFit: "cover" }} src={ place.picture } />
+            </Col>
+            <Col className="d-flex d-md-none mt-2" xl="4" style={{ overflow: "hidden" }} >
+              <img alt="..." className="rounded-bottom" style={{ width: "110%", marginLeft: "-5%", height: "260px", objectFit: "cover" }} src={ place.picture } />
             </Col>
           </Row>
         </Card>
@@ -530,7 +534,7 @@ export const TripInner = (props) => {
               { prepStatus(note.status) }
             </Badge>
           </td>
-          <td className="text-right">
+          <td className="text-right d-none d-md-flex">
             <UncontrolledDropdown>
               <DropdownToggle
                 className="btn-icon-only text-light"
@@ -547,19 +551,19 @@ export const TripInner = (props) => {
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  Action
+                  Change Status
                 </DropdownItem>
                 <DropdownItem
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  Another action
+                  Edit Task
                 </DropdownItem>
                 <DropdownItem
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  Something else here
+                  Delete Task
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -603,59 +607,31 @@ export const TripInner = (props) => {
             <CardHeader className="bg-light">
               <Row className="align-items-center ml-1">
                 { fetchCities(activeCountry) }
-                <p className="mr-2 ml-2 mt-2 text-darker"> – </p>
+                <p className="mr-2 ml-2 mt-2 text-darker d-none d-md-flex"> – </p>
                 <Button
-                  className="mt--2"
+                  className="mt--2 d-none d-md-flex"
                   color="info"
-                  href="#pablo"
+                  href="#new_place"
                   onClick={e => e.preventDefault()}
                   size="sm"
                 >
-                  <i className="fas fa-plus-circle fa-md mr-2" /> Add new city
+                  <i className="fas fa-plus-circle fa-md mr-2 mt-1" /> Add new city
                 </Button>
               </Row>
             </CardHeader>
             <CardBody>
               <Row>
-                <Col className="card-date active mr-1 text-center">
-                  <i className="fas fa-globe-americas text-blue fa-2x"></i>
-                  <br/>
-                  <small><u>All places</u></small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-hotel text-pink fa-2x"></i>
-                  <br/>
-                  <small>Hotels</small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-utensils text-orange fa-2x"></i>
-                  <br/>
-                  <small>Restaurants</small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-landmark text-gray fa-2x"></i>
-                  <br/>
-                  <small>Sightseeings</small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-camera-retro text-darker fa-2x"></i>
-                  <br/>
-                  <small>Photo places</small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-star text-yellow fa-2x"></i>
-                  <br/>
-                  <small>Favourites</small>
-                </Col>
-                <Col className="card-date mr-1 text-center">
-                  <i className="fas fa-plus-circle text-info fa-2x" />
-                  <br/>
-                  <small>My place</small>
-                </Col>
+                <PlaceType icon="fa-globe-americas" color="blue" innerText="All places" active={true} />
+                <PlaceType icon="fa-hotel" color="pink" innerText="Hotels" />
+                <PlaceType icon="fa-utensils" color="orange" innerText="Restaurants" />
+                <PlaceType icon="fa-landmark" color="gray" innerText="Sightseeings" />
+                <PlaceType icon="fa-camera-retro" color="darker" innerText="Photo places" />
+                <PlaceType icon="fa-star" color="yellow" innerText="Favourites" />
+                <PlaceType icon="fa-plus-circle" color="info" innerText="My place" />
               </Row>
-              <hr />
+              <hr className="mt--1 mt-md-0" />
               <Row>
-                <Col xl="2" className="border-right">
+                <Col xl="2" className="border-right d-none d-md-block">
                   <Card className="card-date shadow mb-2 text-center pt-2">
                     <h4>Overview</h4>
                   </Card>
@@ -679,7 +655,7 @@ export const TripInner = (props) => {
           </Card>
         </Col>
         <Col className="mb-5 mb-xl-0" xl="4">
-          <Card className="bg-gradient-white shadow">
+          <Card className="bg-gradient-white shadow d-none d-md-flex">
             <CardHeader className="bg-white border-bottom">
               <Row className="align-items-center">
                 <div className="col">
@@ -851,7 +827,7 @@ export const TripInner = (props) => {
           </Card>
         </Col>
       </Row>
-      <Row className="mb-4">
+      <Row className="d-none d-md-flex mb-4">
         <Col className="mb-5 mb-xl-0" xl="12">
           <Card className="bg-gradient-white shadow">
             <img alt="..." className="rounded" style={{ width: "100%" }} src={pictures.planMap} />
