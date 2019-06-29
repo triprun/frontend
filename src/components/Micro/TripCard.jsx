@@ -13,7 +13,7 @@ const CardBack = styled(Card)`
   min-width: 300px;
   background-blend-mode: overlay;
   background: ${p => `url(${p.background})`}, linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-  backgroundSize: 'cover';
+  background-size: cover;
 `;
 
 const CardFront = styled(Card)`
