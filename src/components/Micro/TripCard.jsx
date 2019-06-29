@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import { Col, Row, Card } from 'reactstrap';
 import styled from 'styled-components';
 
-import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
+import FlagIcon from 'components/FlagIcon/FlagIcon.jsx';
 
 const CardBack = styled(Card)`
   position: relative;
