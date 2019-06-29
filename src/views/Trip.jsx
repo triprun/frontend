@@ -25,6 +25,8 @@ import moment from 'moment';
 // core components
 import { TripHeader } from "components/Headers/TripHeader.jsx";
 import { PlaceType } from "components/Micro/PlaceType.jsx";
+import { ShadowCard } from "components/Micro/ShadowCard.jsx";
+import { TimeCard } from "components/Micro/TimeCard.jsx";
 
 import runningMan from "assets/img/icons/running.svg";
 
@@ -48,7 +50,7 @@ const users = [
   }
 ];
 
-const mockedData = {
+const mocked = {
   name: 'Eurotrip',
   date: 'Jun-Dec 2019',
   background: 'https://i.ibb.co/1XB2xgm/madrid.jpg',
@@ -338,7 +340,7 @@ const mockedData = {
 export const TripInner = (props) => {
 
   // const [tripID] = useState(props.match.params.trip_id);
-  const [trip] = useState(mockedData); // this is fetched using tripID
+  const [trip] = useState(mocked); // this is fetched using tripID
   const [activeCountry, setCountry] = useState(trip.countries[0]);
   const [activeCity, setCity] = useState(activeCountry.cities[0]);
 
@@ -581,22 +583,17 @@ export const TripInner = (props) => {
     return dates.map(d => {
       const date = moment(d).format('MMM Do');
       const day = moment(d).format('dddd');
-      return (
-        <Card className="card-date mb-2 text-center pt-2">
-          <small>{ date }</small>
-          <h4>{ day }</h4>
-        </Card>
-      );
+      return (<TimeCard day={day} date={date} />);
     });
   };
 
   return (
     <>
       <TripHeader
-        background={mockedData.background}
-        name={mockedData.name}
-        dates={mockedData.date}
-        countries={mockedData.countries}
+        background={mocked.background}
+        name={mocked.name}
+        dates={mocked.date}
+        countries={mocked.countries}
         setter={setCountry}
       />
       {/* Page content */}
@@ -771,60 +768,9 @@ export const TripInner = (props) => {
             <CardBody>
             </CardBody>
           </Card>
-          <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${pictures.passport}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-            backgroundSize: 'cover'
-          }}>
-            <CardHeader className="bg-transparent">
-              <Row className="align-items-center">
-                <div className="col">
-                  <h6 className="text-uppercase text-secondary ls-1 mb-1">
-                    List
-                  </h6>
-                  <h2 className="mb-0 text-white">Notes & Docs</h2>
-                </div>
-              </Row>
-            </CardHeader>
-
-            <CardBody>
-            </CardBody>
-          </Card>
-          <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${pictures.planMap}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-            backgroundSize: 'cover'
-          }}>
-            <CardHeader className="bg-transparent">
-              <Row className="align-items-center">
-                <div className="col">
-                  <h6 className="text-uppercase text-secondary ls-1 mb-1">
-                    List
-                  </h6>
-                  <h2 className="mb-0 text-white">Tickets</h2>
-                </div>
-              </Row>
-            </CardHeader>
-
-            <CardBody>
-            </CardBody>
-          </Card>
-          <Card className="shadow mt-3 card-trip-pic-2" style={{
-            background: `url(${pictures.cars}), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))`,
-            backgroundSize: 'cover'
-          }}>
-            <CardHeader className="bg-transparent">
-              <Row className="align-items-center">
-                <div className="col">
-                  <h6 className="text-uppercase text-secondary ls-1 mb-1">
-                    List
-                  </h6>
-                  <h2 className="mb-0 text-white">Services</h2>
-                </div>
-              </Row>
-            </CardHeader>
-
-            <CardBody>
-            </CardBody>
-          </Card>
+          <ShadowCard source={pictures.passport} href="#Link" header="List" text="Notes & Docs" />
+          <ShadowCard source={pictures.planMap} href="#Link" header="Storage" text="Tickets" />
+          <ShadowCard source={pictures.cars} href="#Link" header="Interaction" text="Services" />
         </Col>
       </Row>
       <Row className="d-none d-md-flex mb-4">

@@ -117,4 +117,4 @@ export const TripCard = ({ trip }) => {
       </NavLink>
     </CardBack>
   </Col>);
-}
+};
