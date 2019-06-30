@@ -58,8 +58,8 @@ export const Index = () => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-5">
-          <Col className="mb-5 mb-xl-0" xl="6">
+        <Row className="mt-0 mt-md-5">
+          <Col className="mb-0 mb-md-5 mb-xl-0" xl="6">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
@@ -83,21 +83,21 @@ export const Index = () => {
                   <tr>
                     <th scope="col">Direction</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Tickets left</th>
-                    <th scope="col">Price Change</th>
-                    <th></th>
+                    <th className="d-none d-md-table-cell" scope="col">Tickets left</th>
+                    <th className="d-none d-md-table-cell" scope="col">Price Change</th>
+                    <th className="d-none d-md-table-cell"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Alania, Turkey</th>
                     <td>8,990 rub.</td>
-                    <td>12</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">12</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       22,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -111,12 +111,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Astana, Kazakhstan</th>
                     <td>22,990 rub.</td>
-                    <td>32</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">32</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-up text-warning mr-3" />{" "}
                       9,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -130,12 +130,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Novosibirsk, Russia</th>
                     <td>3,513 rub.</td>
-                    <td>111</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">111</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       36,49%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -149,12 +149,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Cairo, Egypt</th>
                     <td>11,990 rub.</td>
-                    <td>9</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">9</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       10,87%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -168,12 +168,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Denver, CO, USA</th>
                     <td>44,650 rub.</td>
-                    <td>26</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">26</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       6,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -188,7 +188,7 @@ export const Index = () => {
               </Table>
             </Card>
           </Col>
-          <Col className="mb-5 mb-xl-0" xl="6">
+          <Col className="mt-4 mt-md-0 mb-5 mb-xl-0" xl="6">
             <Card className="shadow">
               <CardHeader className="border-0">
                 <Row className="align-items-center">
@@ -212,21 +212,21 @@ export const Index = () => {
                   <tr>
                     <th scope="col">Place</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Rooms left</th>
-                    <th scope="col">Price Change</th>
-                    <th></th>
+                    <th className="d-none d-md-table-cell" scope="col">Rooms left</th>
+                    <th className="d-none d-md-table-cell" scope="col">Price Change</th>
+                    <th className="d-none d-md-table-cell"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Alania, Turkey</th>
                     <td>8,990 rub.</td>
-                    <td>12</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">12</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       22,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -240,12 +240,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Astana, Kazakhstan</th>
                     <td>22,990 rub.</td>
-                    <td>32</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">32</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-up text-warning mr-3" />{" "}
                       9,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -259,12 +259,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Novosibirsk, Russia</th>
                     <td>3,513 rub.</td>
-                    <td>111</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">111</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       36,49%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -278,12 +278,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Cairo, Egypt</th>
                     <td>11,990 rub.</td>
-                    <td>9</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">9</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       10,87%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -297,12 +297,12 @@ export const Index = () => {
                   <tr>
                     <th scope="row">Denver, CO, USA</th>
                     <td>44,650 rub.</td>
-                    <td>26</td>
-                    <td>
+                    <td className="d-none d-md-table-cell">26</td>
+                    <td className="d-none d-md-table-cell">
                       <i className="fas fa-arrow-down text-success mr-3" />{" "}
                       6,53%
                     </td>
-                    <td>
+                    <td className="d-none d-md-table-cell">
                       <Button
                         color="success"
                         href="#pablo"
@@ -318,7 +318,7 @@ export const Index = () => {
             </Card>
           </Col>
         </Row>
-        <Row className="mt-5">
+        <Row className="mt-0 mt-md-5">
           <Col className="mb-5 mb-xl-0" xl="12">
             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
