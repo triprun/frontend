@@ -33,6 +33,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@crossfield/react-read-more": "^0.2.0",
     "classnames": "^2.2.6",
     "moment": "^2.24.0",
     "moment-locales-webpack-plugin": "^1.0.7",
@@ -47,6 +48,8 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
     "reactstrap": "^7.1.0",
+    "read-more-react": "^1.0.9",
+    "readmore-js": "^2.2.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

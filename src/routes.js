@@ -2,6 +2,7 @@ import { Index } from "./views/Index.jsx";
 import { Profile } from "./views/Profile.jsx";
 import { Plans } from "./views/Plans.jsx";
 import { Maps } from "./views/Maps.jsx";
+import { News } from "./views/News.jsx";
 
 var routes = [
   {
@@ -25,6 +26,14 @@ var routes = [
     name: "Today's Hotspots",
     icon: "fa fa-fire text-red",
     component: Index,
+    layout: "/in",
+    inner: false
+  },
+  {
+    path: "/news",
+    name: "News",
+    icon: "fas fa-newspaper text-blue",
+    component: News,
     layout: "/in",
     inner: false
   },
