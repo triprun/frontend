@@ -15,79 +15,38 @@ const NewsOuter = styled.div`
   background: white;
 `;
 
-const ImagePreview = styled.div`
-  /* position: relative; */
-  /* border: solid -90px rgba(#000, .03); */
+const Container = styled.div`
+  position: relative;
+  width: 100%;
   height: 400px;
-  max-height: 400px;
-  background: ${p => `url(${p.source})`} 50%/ cover border-box padding-box;
-  font-size: 4em;
-  margin-bottom: 20px;
-  border-top: 1px solid #DADADA;
-  border-bottom: 1px solid #DADADA;
-
-  /* &:before {
-      position: absolute;
-      z-index: -1;
-      top: -90px; right: -90px; bottom: -90px; left: -90px;
-      border: inherit;
-      border-color: transparent;
-      background: inherit;
-      background-clip: border-box;
-      -webkit-filter: blur(9px);
-      filter: blur(9px);
-      -webkit-clip-path: inset(0);
-      clip-path: inset(0);
-      content: ''
-  } */
-`;
-
-const ImagePreviewSlider = styled.div`
-  /* position: relative; */
-  /* border: solid -90px rgba(#000, .03); */
-  height: 400px;
-  max-height: 400px;
-  background: ${p => `url(${p.source})`} 50%/ cover border-box padding-box;
-  font-size: 4em;
-  margin-bottom: 20px;
-  border-top: 1px solid #DADADA;
-  border-bottom: 1px solid #DADADA;
-
-  /* &:before {
-      position: absolute;
-      z-index: -1;
-      top: -90px; right: -90px; bottom: -90px; left: -90px;
-      border: inherit;
-      border-color: transparent;
-      background: inherit;
-      background-clip: border-box;
-      -webkit-filter: blur(9px);
-      filter: blur(9px);
-      -webkit-clip-path: inset(0);
-      clip-path: inset(0);
-      content: ''
-  } */
+  margin-top: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
 `;
 
 const Blurred = styled.div`
-  background: ${p => `url(${p.source})`} 50%/ cover border-box padding-box;
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  background: ${p => `url(${p.source})`} 150%/ cover border-box padding-box;
   border: inherit;
   border-color: transparent;
   background: inherit;
   background-clip: border-box;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
-  margin-top: 8px;
-  margin-bottom: 14px;
-  z-index: 1;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 400px;
-  max-height: 400px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: contain;
   z-index: 2;
 `;
@@ -141,7 +100,7 @@ const Head = styled(Row)`
 
 const ReadMore = styled(ReadMoreReact)``;
 
-const isArray = v => Array.isArray(v); // shorten array native function
+// const isArray = v => Array.isArray(v); // shorten array native function
 
 // export const NewsBlock = ({ avatar, author, picture, content, date, tags, comments, likes, dislikes }) => {
 //   return (<Wrapper className="col-12 col-md-6 mb-4">
@@ -175,7 +134,12 @@ export const NewsBlock = ({ avatar, author, picture, content, date, tags, commen
         <img className="ml-5 rounded-circle" src={ avatar } alt="author's avatar pic" />
         <Author>{ author }</Author>
       </Head>
-      { picture && <Blurred source={ picture }><Image src={ picture } /></Blurred> }
+      { picture && <Container>
+        <Blurred source={ picture }>
+          <Image src={ picture } />
+        </Blurred>
+        <Image src={ picture } />
+      </Container> }
       <Caption>
         <ReadMore text={ content } min={100} max={9999} ideal={180} readMoreText={<More> ...more</More>} />
         { tags && <><br /><Tags>{ tags.map(t => <Tag>{ t } </Tag>) }</Tags></> }

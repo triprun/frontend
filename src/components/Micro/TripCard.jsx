@@ -25,7 +25,7 @@ const CardFront = styled(Card)`
   transform: translate(-50%, 77%);
   position: absolute;
   left: 50%;
-  transition: $transition-base;
+  transition: transform .2s;
 
   &:hover {
     transform: translate(-50%, 72%);

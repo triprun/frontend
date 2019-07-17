@@ -3,6 +3,7 @@ import { Profile } from "./views/Profile.jsx";
 import { Plans } from "./views/Plans.jsx";
 import { Maps } from "./views/Maps.jsx";
 import { News } from "./views/News.jsx";
+import { Recommended } from "./views/Recommended.jsx";
 
 var routes = [
   {
@@ -26,6 +27,14 @@ var routes = [
     name: "Today's Hotspots",
     icon: "fa fa-fire text-red",
     component: Index,
+    layout: "/in",
+    inner: false
+  },
+  {
+    path: "/recommended",
+    name: "Recommended",
+    icon: "fa fa-star text-yellow",
+    component: Recommended,
     layout: "/in",
     inner: false
   },

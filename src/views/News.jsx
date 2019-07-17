@@ -2,30 +2,13 @@ import React from 'react';
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  Table,
   Container,
   Row,
-  Col,
-  Badge,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  Media,
-  UncontrolledTooltip
 } from 'reactstrap';
-
-import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
 import { Header } from 'components/Headers/Header.jsx';
 import { NewsBlock } from 'components/Micro/NewsBlock.jsx';
-
-const { pictures } = require('./pictures');
 
 const mocked = {
   avatar: 'https://www.biography.com/.image/t_share/MTIwNjA4NjMzNjEwMjc0MzE2/james-franco-245869-1-402.jpg',
@@ -66,7 +49,7 @@ const mocked3 = {
 const mocked4 = {
   avatar: 'https://vyshnevyi-partners.com/wp-content/uploads/2016/12/no-avatar-300x300.png',
   author: 'Kojima Tyosi',
-  // picture: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+  picture: 'https://ippcdn-ippawards.netdna-ssl.com/wp-content/uploads/2018/07/34-1st-PANORAMA-Mateusz-Piesiak-1.jpg',
   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum, tellus eu iaculis auctor, sem libero egestas nisi, quis tempor orci risus a metus.',
   date: '12.06.2019',
   // tags: ['#Japan', '#Tokyo', '#Sushi', '#Neon'],
