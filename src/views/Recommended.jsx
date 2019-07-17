@@ -120,14 +120,17 @@ const mocked = [{
 
 const mockedCountries = [
   {
+    href: '/in/ctry/24',
     source: 'https://independenthostels.co.uk/wp-content/uploads/2015/02/scotland-map-photo.jpg',
     name: 'Scotland'
   },
   {
+    href: '#id',
     source: 'https://www.irishtimes.com/polopoly_fs/1.3834005.1553178907!/image/image.jpg_gen/derivatives/box_620_330/image.jpg',
     name: 'England'
   },
   {
+    href: '#id',
     source: 'https://www.ramblers.org.uk/~/media/Images/Go%20walking/Wales%20Coast%20Path/Anglesey---Mother-Goose-Films-2018-735.jpg',
     name: 'Wales'
   }
@@ -135,30 +138,37 @@ const mockedCountries = [
 
 const mockedCities = [
   {
+    href: '#id',
     source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/1000px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg',
     name: 'London'
   },
   {
+    href: '#id',
     source: 'https://traveller-eu.ru/sites/default/files/styles/index/public/image-800x600.jpg?itok=4JxWK1ZO',
     name: 'Manchester'
   },
   {
+    href: '#id',
     source: 'https://www.independent-birmingham.co.uk/wp-content/uploads/2015/09/CherryblossomWEB-1024x683.jpg',
     name: 'Birmingham'
   },
   {
+    href: '#id',
     source: 'https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F67ae3030-2886-11e8-bb7d-85110f4c5caa.jpg?crop=1152%2C648%2C0%2C60&resize=685',
     name: 'Edinbourgh'
   },
   {
+    href: '#id',
     source: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/04/04/09/glasgow.jpg?w968h681',
     name: 'Glasgow'
   },
   {
+    href: '#id',
     source: 'https://www.visitwales.com/sites/default/files/styles/o_herodestinationregion_fullwidth_1x/public/media-library/2019-01/SVW-C85-1617-0192-ALT-small.jpg?h=b28d2114&amp;itok=v9yIttA4%201x',
     name: 'Cardiff'
   },
   {
+    href: '#id',
     source: 'https://upload.wikimedia.org/wikipedia/commons/2/27/P.3._Swansea_City_Centre_2012.jpg',
     name: 'Swansea'
   }
@@ -166,7 +176,7 @@ const mockedCities = [
 
 export const Recommended = () => {
   const [recommendedTrips] = useState(mocked.filter(trip => trip.status === 0));
-  const [recommendedCountries] = useState(mockedCountries.map(country => ({ ...country, width: 2 })));
+  const [recommendedCountries] = useState(mockedCountries.map(country => ({ ...country, width: 3 })));
   const [recommendedCities] = useState(mockedCities.map(city => ({ ...city, width: 2 })));
 
   const visualize = (trips) => trips.map(trip => <TripCard trip={ trip } />);

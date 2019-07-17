@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 const Hover = styled.p`
@@ -34,7 +36,7 @@ const Image = styled.img`
    object-fit: cover;
 `;
 
-export const StoryImageVisible = ({ width, source, name }) => {
+export const StoryImageVisible = ({ width, href, source, name }) => {
   const mobileWidth = Number.parseInt(width) + 5;
   return (<Div className={ `col-${ mobileWidth } col-md-${ width } m-0 p-0 mr-3` }>
     <Image
@@ -42,6 +44,8 @@ export const StoryImageVisible = ({ width, source, name }) => {
       className="rounded shadow"
       src={ source }
     />
-    <Hover className="rounded">{ name }</Hover>
+    <NavLink to={ href }>
+      <Hover className="rounded">{ name }</Hover>
+    </NavLink>
   </Div>)
 }

@@ -327,7 +327,7 @@ const mocked = {
     content: 'Plan this trip :)'
   }, {
     status: 2,
-    content: 'Spen Bonuses!'
+    content: 'Spend Bonuses!'
   }, {
     status: 3,
     content: 'Take books to train'
