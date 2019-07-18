@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 // reactstrap components
 import { Container, Col, Row } from "reactstrap";
@@ -22,7 +22,13 @@ const ProfileImage = styled.div`
   }
 `;
 
+const Like = styled.div`
+  cursor: pointer;
+`;
+
 export const DetailedHeader = (props) => {
+  const [liked, like] = useState(false);
+
   const visualizeProfiles = (profiles) => {
     return profiles.map(profile => {
       return (
@@ -53,13 +59,13 @@ export const DetailedHeader = (props) => {
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
-            <Col lg="7" md="10" className="mt-7">
+            <Col className="col-12 col-md-10 col-lg-7 mt-6 mt-md-7">
               <h1 className="text-white mb--1">{ props.name }</h1>
               <span className="text-gray">{ props.continent }</span>
               <p className="mt-3 text-white">{ props.description }</p>
             </Col>
-            <Col lg="3" md="1" className="ml-8 mt-9">
-              <Col className="col-12 mt-8">
+            <Col className="col-12 col-md-1 col-lg-3 ml-6 ml-md-8 mt-md-9">
+              <Col className="col-12 mt-md-8">
                 <Row>
                   <Row className="justify-content-center">
                     <Row className="mr-2 pt-5">
@@ -70,9 +76,12 @@ export const DetailedHeader = (props) => {
                       <small className="text-gray">and 16 people like this</small>
                     </Col>
                   </Row>
-                  <div className="ml-5 mt-3">
-                    <small><i className="far fa-heart fa-2x text-white"></i></small>
-                  </div>
+                  <Like className="ml-5 mt-3">
+                    <small onClick={ () => { like(!liked) } }>
+                      { !liked && <i className="far fa-heart fa-2x text-white"></i> }
+                      { liked && <i className="fas fa-heart fa-2x text-red"></i>}
+                    </small>
+                  </Like>
                 </Row>
               </Col>
             </Col>
