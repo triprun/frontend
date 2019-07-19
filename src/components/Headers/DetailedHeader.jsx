@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 // reactstrap components
 import { Container, Col, Row } from "reactstrap";
@@ -28,6 +28,24 @@ const Like = styled.div`
 
 export const DetailedHeader = (props) => {
   const [liked, like] = useState(false);
+
+  useEffect(() => {
+    like(false);
+  }, [props]);
+
+  const showRating = (amount) => {
+    const covertedRating = Number.parseInt(amount);
+    const times = new Array(covertedRating).fill({});
+    return times.map(star => <i className="fas fa-star text-yellow" />);
+  }
+
+  const showRestStars = (amount) => {
+    const rating = amount || 0;
+    const rest = 5 - rating;
+    if(rest === 0) return null;
+    const times = new Array(rest).fill({});
+    return times.map(star => <i className="far fa-star text-white" />)
+  }
 
   const visualizeProfiles = (profiles) => {
     return profiles.map(profile => {
@@ -62,7 +80,12 @@ export const DetailedHeader = (props) => {
             <Col className="col-12 col-md-8 col-lg-6 mt-6 mt-md-7">
               <h1 className="text-white mb--1">{ props.name }</h1>
               <span className="text-gray">{ props.continent }</span>
+              <span className="text-gray">{ props.country }</span>
               <p className="mt-3 text-white">{ props.description }</p>
+              { props.rating && <Row className="ml-1 mb-3 mb-md-0">
+                { showRating(props.rating) }
+                { showRestStars(props.rating) }
+              </Row> }
             </Col>
             <Col className="col-12 col-md-4 col-lg-4 pl-6 ml-md-8 mt-md-9">
               <Col className="col-12 mt-md-8">
