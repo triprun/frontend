@@ -183,13 +183,16 @@ export const DetailedInner = (props) => {
           <h3 className="text-dark">Popular destinations in { overall.name }:</h3>
           <ScrollRow style={{ minHeight: 310 }}>
             { cities && visualizeStory(cities) }
+            { trips && overall.rating && visualize(trips) }
           </ScrollRow>
           <br/>
           <br/>
-          <h3 className="text-dark">Popular marschroutes in { overall.name }:</h3>
-          <ScrollRow style={{ minHeight: 310 }}>
-            { trips && visualize(trips) }
-          </ScrollRow>
+          {
+            overall.continent && <><h3 className="text-dark">Popular marschroutes in { overall.name }:</h3>
+            <ScrollRow style={{ minHeight: 310 }}>
+              { trips && visualize(trips) }
+            </ScrollRow></>
+          }
         </Col>
       </Container>
     </>
