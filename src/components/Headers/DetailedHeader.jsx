@@ -59,12 +59,12 @@ export const DetailedHeader = (props) => {
         {/* Header container */}
         <Container className="d-flex align-items-center" fluid>
           <Row>
-            <Col className="col-12 col-md-10 col-lg-7 mt-6 mt-md-7">
+            <Col className="col-12 col-md-8 col-lg-6 mt-6 mt-md-7">
               <h1 className="text-white mb--1">{ props.name }</h1>
               <span className="text-gray">{ props.continent }</span>
               <p className="mt-3 text-white">{ props.description }</p>
             </Col>
-            <Col className="col-12 col-md-1 col-lg-3 ml-6 ml-md-8 mt-md-9">
+            <Col className="col-12 col-md-4 col-lg-4 pl-6 ml-md-8 mt-md-9">
               <Col className="col-12 mt-md-8">
                 <Row>
                   <Row className="justify-content-center">
@@ -72,11 +72,12 @@ export const DetailedHeader = (props) => {
                       { visualizeProfiles(props.profiles) }
                     </Row>
                     <Col>
-                      <p className="text-white mb--1 pt-2">Kira, Sam, Jessica</p>
-                      <small className="text-gray">and 16 people like this</small>
+                      <p className="text-white mb--1 pt-2">{ props.profiles.map(profile => profile.fullName).join(', ') }</p>
+                      { props.likes - props.profiles.length > 0 && props.likes - props.profiles.length > 100 ? <small className="text-gray">and 100+ people like this</small> : <small className="text-gray">and { props.likes - props.profiles.length } people like this</small> }
+                      { props.likes - props.profiles.length <= 0 && <small className="text-gray">like this destination</small> }
                     </Col>
                   </Row>
-                  <Like className="ml-5 mt-3">
+                  <Like className="ml-3 ml-md-2 mt-3">
                     <small onClick={ () => { like(!liked) } }>
                       { !liked && <i className="far fa-heart fa-2x text-white"></i> }
                       { liked && <i className="fas fa-heart fa-2x text-red"></i>}

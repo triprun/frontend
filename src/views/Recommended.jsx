@@ -9,7 +9,7 @@ import {
 // import FlagIcon from "components/FlagIcon/FlagIcon.jsx";
 
 // core components
-import { Header } from 'components/Headers/Header.jsx';
+import { RecommendedHeader } from 'components/Headers/RecommendedHeader.jsx';
 import { ScrollRow } from 'components/Micro/ScrollRow.jsx';
 import { TripCard } from 'components/Micro/TripCard.jsx';
 import { StoryImageVisible } from 'components/Micro/StoryImageVisible.jsx';
@@ -184,9 +184,9 @@ export const Recommended = () => {
 
   return (
     <>
-      <Header />
+      <RecommendedHeader />
       {/* Page content */}
-      <Container className="mt--5" fluid>
+      <Container className="mt--9 mt-md--6" fluid>
         <Col className="col-12" style={{ margin: 0, padding: 0 }}>
           <h3 className="text-white">Trips for you:</h3>
           <ScrollRow style={{ minHeight: 310 }}>

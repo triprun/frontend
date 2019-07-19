@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // reactstrap components
 import {
@@ -29,6 +29,9 @@ import { StoryImage } from 'components/Micro/StoryImage.jsx';
 const { pictures } = require('./pictures');
 
 export const Profile = () => {
+  const [self, setSelf] = useState(true);
+  const [following, follow] = useState(false);
+
   return (
     <>
       <UserHeader />
@@ -36,20 +39,20 @@ export const Profile = () => {
       <Container className="mt--7" fluid>
         <Row>
           <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="bg-gradient-default shadow">
+            <Card className="bg-white shadow">
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">
-                    <h6 className="text-uppercase text-light ls-1 mb-1">
+                    <h6 className="text-uppercase text-gray ls-1 mb-1">
                       Overview
                     </h6>
-                    <h2 className="text-white mb-0">Active Trips</h2>
+                    <h2 className="text-dark mb-0">Active Trips</h2>
                   </div>
                 </Row>
               </CardHeader>
               <CardBody>
                 <Table
-                  className="align-items-center table-flush text-white"
+                  className="align-items-center table-flush text-dark"
                   responsive
                 >
                   <tbody>
@@ -57,14 +60,14 @@ export const Profile = () => {
                       <th scope="row">
                         <Media className="align-items-center">
                           <a
-                            className="mr-3"
+                            className="mr-0 mr-md-3 d-none d-md-table-cell"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
                             <FlagIcon className="rounded" code="in" size="3x" squared={false} />
                           </a>
                           <Media>
-                            <span className="mb-0 text-sm">
+                            <span className="mb-0 ml--4 ml-md-0 text-sm">
                               #BestTripToDelhi
                             </span>
                           </Media>
@@ -76,7 +79,7 @@ export const Profile = () => {
                           planning
                         </Badge>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="avatar-group">
                           <a
                             className="avatar avatar-sm"
@@ -152,7 +155,7 @@ export const Profile = () => {
                           </UncontrolledTooltip>
                         </div>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="d-flex align-items-center">
                           <span className="mr-2 text-green"><i className="fas fa-user-friends" /> New companion invited</span>
                         </div>
@@ -162,14 +165,14 @@ export const Profile = () => {
                       <th scope="row">
                         <Media className="align-items-center">
                           <a
-                            className="mr-3"
+                            className="mr-0 mr-md-3 d-none d-md-table-cell"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
                             <FlagIcon className="rounded" code="ru" size="3x" squared={false} />
                           </a>
                           <Media>
-                            <span className="mb-0 text-sm">
+                            <span className="mb-0 ml--4 ml-md-0 text-sm">
                               Amazing Trip To Moscow
                             </span>
                           </Media>
@@ -181,7 +184,7 @@ export const Profile = () => {
                           delayed
                         </Badge>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="avatar-group">
                           <a
                             className="avatar avatar-sm"
@@ -257,7 +260,7 @@ export const Profile = () => {
                           </UncontrolledTooltip>
                         </div>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="d-flex align-items-center">
                           <span className="mr-2 text-danger"><i className="fas fa-user-times" /> Companion left</span>
                         </div>
@@ -267,14 +270,14 @@ export const Profile = () => {
                       <th scope="row">
                         <Media className="align-items-center">
                           <a
-                            className="mr-3"
+                            className="mr-0 mr-md-3 d-none d-md-table-cell"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
                             <FlagIcon className="rounded" code="es" size="3x" squared={false} />
                           </a>
                           <Media>
-                            <span className="mb-0 text-sm">
+                            <span className="mb-0 ml--4 ml-md-0 text-sm">
                               Exploring Mallorca
                             </span>
                           </Media>
@@ -286,7 +289,7 @@ export const Profile = () => {
                           planning
                         </Badge>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="avatar-group">
                           <a
                             className="avatar avatar-sm"
@@ -362,7 +365,7 @@ export const Profile = () => {
                           </UncontrolledTooltip>
                         </div>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="d-flex align-items-center">
                           <span className="mr-2 text-info"><i className="fas fa-monument" /> New place suggested</span>
                         </div>
@@ -372,14 +375,14 @@ export const Profile = () => {
                       <th scope="row">
                         <Media className="align-items-center">
                           <a
-                            className="mr-3"
+                            className="mr-0 mr-md-3 d-none d-md-table-cell"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
                           >
                             <FlagIcon className="rounded" code="es" size="3x" squared={false} />
                           </a>
                           <Media>
-                            <span className="mb-0 text-sm">
+                            <span className="mb-0 ml--4 ml-md-0 text-sm">
                               Jump into jungles of Madrid
                             </span>
                           </Media>
@@ -391,7 +394,7 @@ export const Profile = () => {
                           time to go
                         </Badge>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="avatar-group">
                           <a
                             className="avatar avatar-sm"
@@ -467,7 +470,7 @@ export const Profile = () => {
                           </UncontrolledTooltip>
                         </div>
                       </td>
-                      <td>
+                      <td className="d-none d-md-table-cell">
                         <div className="d-flex align-items-center">
                           <span className="mr-2 text-info"><i className="fas fa-poll" /> New poll created</span>
                         </div>
@@ -499,10 +502,10 @@ export const Profile = () => {
                     className="mr-4"
                     color="info"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={ e => { e.preventDefault(); follow(!following); } }
                     size="sm"
                   >
-                    Connect
+                    { !following ? 'Follow' : 'Following'}
                   </Button>
                   <Button
                     className="float-right"
@@ -578,7 +581,7 @@ export const Profile = () => {
                 </Row>
               </CardHeader>
               <CardBody>
-                <Col className="float-left col-lg-6 col-xs-12">
+                <Col className="float-left col-lg-6 col-12">
                   <img
                     alt="..."
                     className="rounded shadow"

@@ -11,7 +11,7 @@ const Hover = styled.p`
   height: 100%;
   padding-top: 290px;
   padding-left: 5%;
-  background: rgba(29, 106, 154, 0.72);
+  background: rgba(0, 0, 0, 0.25);
   color: #fff;
   visibility: hidden;
   opacity: 0;

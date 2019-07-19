@@ -17,18 +17,19 @@ const mocked = {
   continent: 'Europe',
   description: 'Scotland, the U.K.’s northernmost country, is a land of mountain wildernesses such as the Cairngorms and Northwest Highlands, interspersed with glacial glens (valleys) and lochs (lakes).',
   profiles: [{
-    fullName: '...',
+    fullName: 'Kira',
     href: '#user_ID',
     avatar: 'https://i.ibb.co/2dr2cSf/team-3-800x800.jpg'
   },{
-    fullName: '...',
+    fullName: 'Sam',
     href: '#user_ID',
     avatar: 'https://i.ibb.co/p3RYgXZ/team-2-800x800.jpg'
   },{
-    fullName: '...',
+    fullName: 'Jessica',
     href: '#user_ID',
     avatar: 'https://i.ibb.co/CwwjFzq/team-4-800x800.jpg'
-  }]
+  }],
+  likes: 98
 };
 
 const mockedCities = [
@@ -90,6 +91,7 @@ export const DetailedInner = (props) => {
         continent={ overall.continent }
         description={ overall.description }
         profiles={ overall.profiles }
+        likes={ overall.likes }
       />
       {/* Page content */}
       <Container className="mt-5" fluid>
