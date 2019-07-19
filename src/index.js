@@ -21,6 +21,8 @@ render(
     <Switch>
       <Route path="/in/trip/:trip_id" render={props => <Trip {...props} />} />
       <Route path="/in/ctry/:ctry_id" render={props => <Detailed {...props} />} />
+      <Route path="/in/city/:city_id" render={props => <Detailed {...props} />} />
+      <Route path="/in/plce/:plce_id" render={props => <Detailed {...props} />} />
       <Route path="/in" render={props => <Panel {...props} />} />
       <Route path="/auth" component={Auth} />
       <Redirect from="/" to="/in/hots" />

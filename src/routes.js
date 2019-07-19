@@ -1,7 +1,7 @@
 import { Index } from "./views/Index.jsx";
 import { Profile } from "./views/Profile.jsx";
 import { Plans } from "./views/Plans.jsx";
-import { Maps } from "./views/Maps.jsx";
+// import { Maps } from "./views/Maps.jsx";
 import { News } from "./views/News.jsx";
 import { Recommended } from "./views/Recommended.jsx";
 
@@ -45,14 +45,15 @@ var routes = [
     component: News,
     layout: "/in",
     inner: false
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: "ni ni-pin-3 text-orange",
-    component: Maps,
-    layout: "/in",
-    inner: false
   }
+  // },
+  // {
+  //   path: "/maps",
+  //   name: "Maps",
+  //   icon: "ni ni-pin-3 text-orange",
+  //   component: Maps,
+  //   layout: "/in",
+  //   inner: false
+  // }
 ];
 export default routes;

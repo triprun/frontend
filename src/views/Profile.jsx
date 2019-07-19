@@ -29,7 +29,7 @@ import { StoryImage } from 'components/Micro/StoryImage.jsx';
 const { pictures } = require('./pictures');
 
 export const Profile = () => {
-  const [self, setSelf] = useState(true);
+  // const [self, setSelf] = useState(true);
   const [following, follow] = useState(false);
 
   return (
@@ -223,7 +223,7 @@ export const Profile = () => {
                             Romina Hadid
                           </UncontrolledTooltip>
                           <a
-                            className="avatar avatar-md"
+                            className="avatar avatar-sm"
                             href="#pablo"
                             id="tooltip467171202"
                             onClick={e => e.preventDefault()}
