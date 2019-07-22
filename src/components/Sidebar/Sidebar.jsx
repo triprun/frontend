@@ -36,6 +36,8 @@ import {
   Col
 } from "reactstrap";
 
+import { SearchBar } from "components/Micro/Searchbar.jsx";
+
 import runningMan from "assets/img/icons/running.svg";
 
 var ps;
@@ -66,13 +68,13 @@ export const Sidebar = (props) => {
       if(!prop.inner) return (
         <NavItem key={key}>
           <NavLink
-            to={prop.layout + prop.path}
+            to={ prop.layout + prop.path }
             tag={NavLinkRRD}
             onClick={closeCollapse}
             activeClassName="active"
           >
-            <i className={prop.icon} />
-            {prop.name}
+            <i className={ prop.icon } />
+            { prop.name }
           </NavLink>
         </NavItem>
       );
@@ -90,13 +92,13 @@ export const Sidebar = (props) => {
         <button
           className="navbar-toggler"
           type="button"
-          onClick={toggleCollapse}
+          onClick={ toggleCollapse }
         >
           <span className="navbar-toggler-icon" />
         </button>
         {/* Brand */}
         <NavbarBrand className="pt-0" tag={Link} to="/">
-          <h1 className="text-darker">Trip<img style={{ height: '28px' }} src={runningMan} />un</h1>
+          <h1 className="text-darker">Trip<img style={{ height: '28px' }} src={ runningMan } />un</h1>
         </NavbarBrand>
         {/* User */}
         <Nav className="align-items-center d-md-none">
@@ -106,7 +108,7 @@ export const Sidebar = (props) => {
                 <span className="avatar avatar-sm rounded-circle">
                   <img
                     alt="..."
-                    src={avatar}
+                    src={ avatar }
                   />
                 </span>
               </Media>
@@ -125,7 +127,7 @@ export const Sidebar = (props) => {
                 <span>Support</span>
               </DropdownItem>
               <DropdownItem divider />
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
+              <DropdownItem href="#pablo" onClick={ e => e.preventDefault() }>
                 <i className="ni ni-user-run" />
                 <span>Logout</span>
               </DropdownItem>
@@ -133,7 +135,7 @@ export const Sidebar = (props) => {
           </UncontrolledDropdown>
         </Nav>
         {/* Collapse */}
-        <Collapse navbar isOpen={collapseOpen}>
+        <Collapse navbar isOpen={ collapseOpen }>
           {/* Collapse header */}
           <div className="navbar-collapse-header d-md-none">
             <Row>
@@ -141,33 +143,19 @@ export const Sidebar = (props) => {
                 <button
                   className="navbar-toggler"
                   type="button"
-                  onClick={toggleCollapse}
+                  onClick={ toggleCollapse }
                 >
                   <span />
                   <span />
                 </button>
               </Col>
-              <h3 className="mt-2 mb--1">Trip<img style={{ height: '18px' }} src={runningMan} />un Menu</h3>
+              <h3 className="mt-2 mb--1">Trip<img style={{ height: '18px' }} src={ runningMan } />un Menu</h3>
             </Row>
           </div>
-          {/* Form */}
-          <Form className="mt-4 mb-3 d-md-none">
-            <InputGroup className="input-group-rounded input-group-merge">
-              <Input
-                aria-label="Search"
-                className="form-control-rounded form-control-prepended"
-                placeholder="Search"
-                type="search"
-              />
-              <InputGroupAddon addonType="prepend">
-                <InputGroupText>
-                  <span className="fa fa-search" />
-                </InputGroupText>
-              </InputGroupAddon>
-            </InputGroup>
-          </Form>
+          {/* Searchbar */}
+          <SearchBar />
           {/* Navigation */}
-          <Nav navbar>{createLinks(routes)}</Nav>
+          <Nav navbar>{ createLinks(routes) }</Nav>
           <div className="d-none d-sm-block">
             <br />
             <br />
